@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MUI Overrides */
+.css-h4os0j:-webkit-autofill {
+  box-shadow: rgb(31 41 55) 0px 0px 0px 100px inset !important;
+}
+
+.css-p51h6s-MuiInputBase-input-MuiOutlinedInput-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px rgb(31 41 55) inset !important;
+}
+
+::-webkit-scrollbar {
+  z-index: 9999;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .p-bold-16 {
+    @apply text-[16px] font-bold leading-[24px];
+  }
+
+  .p-medium-16 {
+    @apply text-[16px] font-medium leading-[24px];
+  }
+
+  .p-regular-16 {
+    @apply text-[16px] font-normal leading-[24px];
+  }
+
+  .select-field {
+    @apply w-full bg-[#f6f6f6] h-[54px] placeholder:text-[#757575] rounded-xl p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
+  }
+
+  .input-field {
+    @apply focus:ring-2 focus:ring-magenta bg-gray-700 text-gray-100 placeholder-gray-400 !important;
+  }
+
+  .submit-btn {
+    @apply w-full text-sm bg-magenta hover:bg-magenta2 flex items-center justify-center gap-4 py-3 px-5 mt-4 rounded-md transition duration-300 !important;
+  }
+
+  .select-item {
+    @apply py-2 cursor-pointer focus:bg-[#F6F8FD] flex items-center gap-2;
+  }
+
+  .referral-selector-upload-btn {
+    @apply w-full flex items-center justify-center gap-2 rounded-md font-bold mt-6 text-sm border border-magenta text-magenta bg-transparent hover:opacity-80 transition ease-in duration-150 capitalize !important;
+  }
+  .referral-selector-btn {
+    @apply bg-magenta hover:bg-magenta2 text-base capitalize flex items-center gap-4 relative !important;
+  }
+
+  .modal-wrapper {
+    @apply w-[95%] md:w-[90%] max-w-[500px] md:h-fit mx-auto overflow-y-auto absolute top-[50%] left-[50%] transform translate-y-[-50%] translate-x-[-50%] px-4 py-6 bg-gray-800 rounded-xl border-none outline-none !important;
+  }
+
+  .modal-container {
+    @apply flex flex-col gap-4 justify-center w-full  !important;
+  }
+
+  .mui-icon {
+    @apply text-gray-400 hover:text-magenta cursor-pointer;
+  }
+}
