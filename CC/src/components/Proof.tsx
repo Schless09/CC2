@@ -1,3 +1,4 @@
+
 'use client'
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link'; 
@@ -16,7 +17,10 @@ const useIntersectionObserver = (options: IntersectionObserverInit = {}) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.unobserve(entry.target);
+      }
     }, options);
 
     if (ref.current) {
@@ -100,7 +104,7 @@ const Box: React.FC<BoxProps> = ({ number, text, prefix = '', link }) => {
   return (
     <motion.div
       ref={ref}
-      className="rounded-lg shadow-lg p-8 flex flex-col items-center justify-center flex-1 transition-all hover:scale-105"
+      className="rounded-lg shadow-lg p-8 flex flex-col items-center justify-center flex-1"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.5 }}
@@ -131,7 +135,7 @@ const Proof: React.FC = () => {
     useEffect(() => {
       const fetchJobPostings = async () => {
         const jobPostings = await getJobPostings(); 
-        const count = jobPostings.length < 30 ? 30 : jobPostings.length; // Check if count is less than 30
+        const count = jobPostings.length < 30 ? 30 : jobPostings.length;
         setJobCount(count); 
       };
   
