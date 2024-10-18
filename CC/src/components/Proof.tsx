@@ -144,8 +144,8 @@ const Proof: React.FC = () => {
 
   return (
     <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-6 lg:space-y-0 lg:space-x-6 p-6">
-      <Box number={104} text="SWE Placements" />
-      <Box number={jobCount} text="Current Referral Opportunities" link="/openings" />
+      <Box number={97} text="SWE Placements" />
+      <Box number={jobCount} text="Current Referral Opportunities" link="/openings"/>
       <Box number={6000} text="First Referral Bonus" prefix="$" />
     </div>
   );
