@@ -33,7 +33,6 @@ const Candidates = () => {
       });
     }, options);
 
-    // Observe each item
     const itemsToObserve = document.querySelectorAll('.item');
     itemsToObserve.forEach((item) => observer.observe(item));
 
@@ -53,12 +52,12 @@ const Candidates = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-10"> {/* Wider container */}
+    <div className="max-w-7xl mx-auto p-6"> {/* Narrower padding */}
       <motion.h2
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="text-2xl md:text-5xl font-bold text-green mb-16 text-left" // Smaller on mobile
+        className="text-xl md:text-3xl font-bold text-green mb-8 text-left" // Smaller heading
       >
         Why you should trust us with your career
       </motion.h2>
@@ -66,22 +65,22 @@ const Candidates = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="text-lg md:text-2xl text-gray-700 mb-16 text-left" // Smaller on mobile
+        className="text-base md:text-xl text-gray-700 mb-8 text-left" // Smaller body text
       >
         As a candidate in high demand, you deserve a trusted partner who can connect you with exceptional opportunities and provide expert guidance for your career.
       </motion.p>
-      <div className="space-y-16">
+      <div className="space-y-8">
         {items.map((item, index) => (
           <motion.div
             key={index}
             initial="hidden"
             animate={visibleItems.includes(index) ? "visible" : "hidden"}
             variants={itemVariants}
-            className={`flex items-start border-b border-gray-200 pb-10 item`}
+            className={`flex items-start border-b border-gray-200 pb-6 item`}
             data-index={index}
           >
-            <span className="font-bold text-green text-5xl md:text-6xl mr-12">{`0${index + 1}`}</span> {/* Adjusted to be smaller on mobile */}
-            <p className={`text-gray-${index % 2 === 0 ? '800' : '600'} text-lg md:text-5xl`}>
+            <span className="font-bold text-green text-3xl md:text-4xl mr-6">{`0${index + 1}`}</span> {/* Smaller numbers */}
+            <p className={`text-gray-${index % 2 === 0 ? '800' : '600'} text-base md:text-xl`}>
               {item}
             </p>
           </motion.div>
