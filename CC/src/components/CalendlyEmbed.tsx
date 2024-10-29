@@ -20,7 +20,7 @@ const CalendlyEmbed = ({ url }: { url: string }) => {
     <div className="container mx-auto px-4 py-4">
       {!isLoaded && (
         <div className="flex justify-center items-center h-[600px]">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-magenta"></div>
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green"></div>
         </div>
       )}
       <div 

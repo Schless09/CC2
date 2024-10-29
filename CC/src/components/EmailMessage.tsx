@@ -40,7 +40,7 @@ const EmailMessage = ({
            We exclusively conduct contingent searches, ensuring our services are tailored to meet your specific needs. To get started, please feel free to reach out directly or {' '}
             <Link
               href="https://thecodercollective.com/hiring-manager"
-              className="text-magenta underline"
+              className="text-green underline"
               target="_blank"
             >
               visit our website
@@ -55,7 +55,7 @@ const EmailMessage = ({
             847-609-4515 | Connect w/ me on{' '}
             <Link
               href="https://www.linkedin.com/in/andrew-schuessler-18965559/"
-              className="text-magenta underline"
+              className="text-green underline"
               target="_blank"
             >
               LinkedIn

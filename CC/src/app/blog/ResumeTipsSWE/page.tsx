@@ -35,7 +35,7 @@ const ResumeTipsSWE = () => {
   {/* Back to Blog Button */}
   <div className="absolute bottom-4 right-4">
     <Link href="/blog">
-      <span className="bg-black border border-magenta text-magenta px-4 py-2 rounded-full hover:bg-magenta hover:text-white transition-colors">
+      <span className="bg-black border border-green text-green px-4 py-2 rounded-full hover:bg-green hover:text-white transition-colors">
         Back to Blog
       </span>
     </Link>

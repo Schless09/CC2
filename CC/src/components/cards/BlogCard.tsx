@@ -24,7 +24,7 @@ interface BlogCardProps {
 export const BlogCard: React.FC<BlogCardProps> = ({ post, isHovered, onHover }) => (
   <Card
     className={`overflow-hidden transition-all duration-300 ${
-      isHovered ? 'border-magenta border-2 shadow-2xl scale-105' : 'hover:shadow-lg'
+      isHovered ? 'border-green border-2 shadow-2xl scale-105' : 'hover:shadow-lg'
     }`}
     onMouseEnter={() => onHover(post.id)}
     onMouseLeave={() => onHover(null)}
@@ -48,9 +48,9 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, isHovered, onHover }) 
           variant="outline"
           className={`w-full transition-all duration-300 ${
             isHovered
-              ? 'bg-magenta text-white'
-              : 'bg-white text-magenta border-magenta'
-          } hover:bg-magenta hover:text-white`}
+              ? 'bg-green text-white'
+              : 'bg-white text-green border-green'
+          } hover:bg-green hover:text-white`}
         >
           Read More
           <ChevronRight className="w-4 h-4 ml-2" />

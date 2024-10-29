@@ -47,7 +47,7 @@ const TechCompanies = () => {
         </h2>
         
         <Link href="/hiring-manager" className="group text-center mt-3 md:mt-4">
-          <span className="inline-flex items-center bg-magenta text-white py-2 px-4 md:py-2.5 md:px-5 focus:outline-none rounded-full text-sm md:text-base transition-all duration-300 ease-in-out group-hover:bg-opacity-70 group-hover:scale-110">
+          <span className="inline-flex items-center bg-green text-white py-2 px-4 md:py-2.5 md:px-5 focus:outline-none rounded-full text-sm md:text-base transition-all duration-300 ease-in-out group-hover:bg-opacity-70 group-hover:scale-110">
             Let's Talk
           </span>
         </Link>

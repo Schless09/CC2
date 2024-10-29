@@ -21,7 +21,7 @@ const FilterInput: React.FC<FilterInputProps> = ({ icon, name, placeholder, onCh
         name={name}
         placeholder={placeholder}
         onChange={onChange}
-        className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-magenta focus:border-magenta transition duration-200 text-gray-800"
+        className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green focus:border-green transition duration-200 text-gray-800"
       />
     </div>
   </div>
@@ -145,7 +145,7 @@ const JobOpeningsClient: React.FC<JobOpeningsClientProps> = ({ user, openings })
         >
           <button
             onClick={handleLoadMore}
-            className="px-6 py-3 bg-magenta text-white rounded-lg hover:bg-white border-2 border-magenta hover:text-magenta transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="px-6 py-3 bg-green text-white rounded-lg hover:bg-white border-2 border-green hover:text-green transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Load More Opportunities
           </button>

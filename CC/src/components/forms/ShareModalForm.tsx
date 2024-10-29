@@ -41,7 +41,7 @@ const ShareModalForm = ({ onSubmit, isLoading }: ShareModalFormProps) => {
               {...field}
               id="firstName"
               type="text"
-              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-magenta ${
+              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-green ${
                 errors.firstName ? 'border-red-500' : 'border-gray-300'
               }`}
             />
@@ -63,7 +63,7 @@ const ShareModalForm = ({ onSubmit, isLoading }: ShareModalFormProps) => {
               {...field}
               id="lastName"
               type="text"
-              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-magenta ${
+              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-green ${
                 errors.lastName ? 'border-red-500' : 'border-gray-300'
               }`}
             />
@@ -85,7 +85,7 @@ const ShareModalForm = ({ onSubmit, isLoading }: ShareModalFormProps) => {
               {...field}
               id="email"
               type="email"
-              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-magenta ${
+              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-green ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
             />
@@ -107,7 +107,7 @@ const ShareModalForm = ({ onSubmit, isLoading }: ShareModalFormProps) => {
               {...field}
               id="linkedinURL"
               type="text"
-              className="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta"
+              className="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green"
             />
           </div>
         )}
@@ -115,9 +115,9 @@ const ShareModalForm = ({ onSubmit, isLoading }: ShareModalFormProps) => {
     <button
   type="submit"
   disabled={isLoading}
-  className="w-full py-2 px-4 bg-magenta text-white font-semibold rounded-md 
-             hover:bg-magenta/80 hover:shadow-md
-             focus:outline-none focus:ring-2 focus:ring-magenta focus:ring-offset-2 
+  className="w-full py-2 px-4 bg-green text-white font-semibold rounded-md 
+             hover:bg-green/80 hover:shadow-md
+             focus:outline-none focus:ring-2 focus:ring-green focus:ring-offset-2 
              transition-all duration-300 ease-in-out
              disabled:opacity-50 disabled:cursor-not-allowed"
 >

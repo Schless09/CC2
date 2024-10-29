@@ -30,11 +30,11 @@ export const MeetingConfirmation = () => {
           <img src="/images/Andrew_Schuessler_LinkedIn Pic.jpeg" alt="LinkedIn Profile" className="w-24 h-24 rounded-full" />
         </div>
         
-        <p className="text-lg text-gray-300 mb-2"><strong className='text-magenta'>Event:</strong> {event_type_name}</p>
-        <p className="text-lg text-gray-300 mb-2"><strong className='text-magenta'>Start Time:</strong> {formatDateTime(event_start_time)}</p>
-        <p className="text-lg text-gray-300 mb-2"><strong className='text-magenta'>End Time:</strong> {formatDateTime(event_end_time)}</p>
-        <p className="text-lg text-gray-300 mb-2"><strong className='text-magenta'>Invitee:</strong> {invitee_first_name} {invitee_last_name}</p>
-        <p className="text-lg text-gray-300 mb-2"><strong className='text-magenta'>Email:</strong> {invitee_email}</p>
+        <p className="text-lg text-gray-300 mb-2"><strong className='text-green'>Event:</strong> {event_type_name}</p>
+        <p className="text-lg text-gray-300 mb-2"><strong className='text-green'>Start Time:</strong> {formatDateTime(event_start_time)}</p>
+        <p className="text-lg text-gray-300 mb-2"><strong className='text-green'>End Time:</strong> {formatDateTime(event_end_time)}</p>
+        <p className="text-lg text-gray-300 mb-2"><strong className='text-green'>Invitee:</strong> {invitee_first_name} {invitee_last_name}</p>
+        <p className="text-lg text-gray-300 mb-2"><strong className='text-green'>Email:</strong> {invitee_email}</p>
       </div>
     </div>
   );

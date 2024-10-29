@@ -9,6 +9,7 @@ const colors = {
   magenta: '#C90D5EFF',
   black: '#000000',
   lightGrey: '#f7f7f7',
+  green: '#128940FF'
 };
 
 const useIntersectionObserver = (options: IntersectionObserverInit = {}) => {
@@ -95,7 +96,7 @@ const Box: React.FC<BoxProps> = ({ number, text, prefix = '', link }) => {
       initial={{ scale: 0 }}
       animate={{ scale: isVisible ? 1 : 0 }}
       transition={{ type: 'spring', stiffness: 100, delay: 0.2 }}
-      style={{ color: colors.magenta }}
+      style={{ color: colors.green }}
     >
       <CountUp end={number} duration={2000} prefix={prefix} startCounting={hasCounted} />
     </motion.div>

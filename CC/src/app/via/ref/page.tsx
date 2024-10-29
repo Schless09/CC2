@@ -27,7 +27,7 @@ const Referral = () => {
             </h2>
             <h3 className='text-lg md:text-xl mt-4'>
               Please complete the form below to ensure we're able to thank{' '}
-              <span className='text-magenta font-bold'>
+              <span className='text-green font-bold'>
                 {referralUser.firstName} {referralUser.lastName}
               </span>
               .

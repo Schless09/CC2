@@ -27,7 +27,7 @@ const HMItems = () => {
             <img src="/images/background-pattern.svg" alt="pattern" className="object-cover w-full h-full" />
           </div>
           
-          <h3 className="relative z-10 text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yellow-500">
+          <h3 className="relative z-10 text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green to-green2">
             Functional Skills We Prioritize
           </h3>
           
@@ -38,7 +38,7 @@ const HMItems = () => {
                 className="expertise-item bg-gray-50 p-6 rounded-xl shadow-lg  hover:text-white transition-all duration-300"
                 whileHover={hoverEffect.whileHover}
               >
-                <h4 className="font-semibold text-2xl mb-4 text-magenta">{area.name}</h4>
+                <h4 className="font-semibold text-2xl mb-4 text-green">{area.name}</h4>
               </motion.div>
             ))}
           </div>
@@ -58,7 +58,7 @@ const HMItems = () => {
             ></div>
 
             {/* Title */}
-            <h2 className="relative text-4xl md:text-6xl font-bold mb-6 md:mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yellow-500 drop-shadow-lg">
+            <h2 className="relative text-4xl md:text-6xl font-bold mb-6 md:mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-green to-green2 drop-shadow-lg">
               Building Teams at Every Level
             </h2>
 
@@ -80,7 +80,7 @@ const HMItems = () => {
             <img src="/images/geolocation.svg" alt="location pattern" className="object-cover w-full h-full" />
           </div>
 
-          <h3 className="relative z-10 text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yellow-500">
+          <h3 className="relative z-10 text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green to-green2">
             Rapidly Expanding in These Key Markets
           </h3>
           
@@ -106,7 +106,7 @@ const HMItems = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-pink-50 opacity-20 pointer-events-none"></div>
 
-          <h3 className="relative text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yellow-500">
+          <h3 className="relative text-5xl font-semibold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green to-green2">
             Why Choose Coder Collective?
           </h3>
           
@@ -117,7 +117,7 @@ const HMItems = () => {
                 className="reason-item bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-110 transform transition duration-300"
                 whileHover={{ y: -5, scale: 1.05 }}
               >
-                <h4 className="font-semibold text-2xl mb-4 text-magenta">{item.title}</h4>
+                <h4 className="font-semibold text-2xl mb-4 text-green">{item.title}</h4>
                 <p className="text-gray-700">{item.description}</p>
               </motion.div>
             ))}

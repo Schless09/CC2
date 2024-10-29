@@ -52,7 +52,7 @@ const Recruitment = () => {
           className="contact-section bg-white py-16 px-6 md:px-12 text-center rounded-2xl shadow-2xl max-w-4xl mx-auto"
           {...fadeIn}
         >
-          <h3 className="text-4xl font-semibold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yorange">
+          <h3 className="text-4xl font-semibold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-green to-green2">
             Connect With Us
           </h3>
           <p className="text-2xl leading-relaxed mb-10 text-gray-700">
@@ -60,9 +60,9 @@ const Recruitment = () => {
           </p>
           <div className="space-y-6">
             <p className="text-2xl text-gray-800">
-              Email: <a href="mailto:contact@thecodercollective.com" className="text-magenta hover:underline transition duration-300">contact@thecodercollective.com</a>
+              Email: <a href="mailto:contact@thecodercollective.com" className="text-green hover:underline transition duration-300">contact@thecodercollective.com</a>
             </p>
-            <p className="text-2xl text-gray-800">Phone: <span className="text-magenta">847-609-4515</span></p>
+            <p className="text-2xl text-gray-800">Phone: <span className="text-green">847-609-4515</span></p>
           </div>
         </motion.section>
       </main>

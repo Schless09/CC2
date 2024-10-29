@@ -34,11 +34,11 @@ const Header = () => {
           isScrolled
             ? 'bg-black bg-opacity-90 backdrop-blur-md py-3 shadow-lg' // Added shadow for style
             : 'bg-black py-8'
-        } border-b-2 border-magenta`} 
+        } border-b-2 border-green`} 
       >
         <nav className="w-full px-6 flex justify-between items-center">
           <Link href="/">
-            <span className="text-3xl text-magenta font-extrabold hover:text-white transition-colors flex items-center">
+            <span className="text-3xl text-green font-extrabold hover:text-white transition-colors flex items-center">
               Coder Collective
             </span>
           </Link>
@@ -46,28 +46,28 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/openings">
-              <span className="text-lg text-white hover:text-magenta transition-colors">
+              <span className="text-lg text-white hover:text-green transition-colors">
                 Openings
               </span>
             </Link>
             <Link href="/businessModel">
-              <span className="text-lg text-white hover:text-magenta transition-colors">
+              <span className="text-lg text-white hover:text-green transition-colors">
                 $6K Referrals
               </span>
             </Link>
             <Link href="/candidates">
-              <span className="text-lg text-white hover:text-magenta transition-colors">
+              <span className="text-lg text-white hover:text-green transition-colors">
                 Candidates
               </span>
             </Link>
             <Link href="/hiring-manager">
-              <span className="text-lg text-white hover:text-magenta transition-colors">
+              <span className="text-lg text-white hover:text-green transition-colors">
                 Hiring Managers
               </span>
             </Link>
             {isSignedIn && (
               <Link href="/dashboard">
-                <span className="text-lg text-white hover:text-magenta transition-colors">
+                <span className="text-lg text-white hover:text-green transition-colors">
                   Dashboard
                 </span>
               </Link>
@@ -75,12 +75,12 @@ const Header = () => {
             {!isSignedIn ? (
               <div className="space-x-4">
                 <SignInButton mode="modal">
-                  <button className="bg-transparent border border-magenta text-magenta px-5 py-2 rounded-full hover:bg-magenta hover:text-white transition-colors">
+                  <button className="bg-transparent border border-green text-green px-5 py-2 rounded-full hover:bg-green hover:text-white transition-colors">
                     Sign In
                   </button>
                 </SignInButton>
                 <SignUpButton mode="modal">
-                  <button className="bg-magenta text-white px-5 py-2 rounded-full hover:bg-black hover:text-magenta transition-colors">
+                  <button className="bg-green text-white px-5 py-2 rounded-full hover:bg-black hover:text-green transition-colors">
                     Sign Up
                   </button>
                 </SignUpButton>
@@ -101,28 +101,28 @@ const Header = () => {
           <div className="md:hidden w-full bg-black bg-opacity-95 backdrop-blur-md">
             <div className="px-4 py-4 space-y-4">
               <Link href="/openings" onClick={toggleMenu}>
-                <span className="block text-lg text-white hover:text-magenta transition-colors">
+                <span className="block text-lg text-white hover:text-green transition-colors">
                   Openings
                 </span>
               </Link>
               <Link href="/businessModel" onClick={toggleMenu}>
-                <span className="block text-lg text-white hover:text-magenta transition-colors">
+                <span className="block text-lg text-white hover:text-green transition-colors">
                   $6K Referrals
                 </span>
               </Link>
               <Link href="/candidates" onClick={toggleMenu}>
-                <span className="block text-lg text-white hover:text-magenta transition-colors">
+                <span className="block text-lg text-white hover:text-green transition-colors">
                   Candidates
                 </span>
               </Link>
               <Link href="/hiring-manager" onClick={toggleMenu}>
-                <span className="block text-lg text-white hover:text-magenta transition-colors">
+                <span className="block text-lg text-white hover:text-green transition-colors">
                   Hiring Managers
                 </span>
               </Link>
               {isSignedIn && (
                 <Link href="/dashboard" onClick={toggleMenu}>
-                  <span className="block text-lg text-white hover:text-magenta transition-colors">
+                  <span className="block text-lg text-white hover:text-green transition-colors">
                     Dashboard
                   </span>
                 </Link>
@@ -130,12 +130,12 @@ const Header = () => {
               {!isSignedIn ? (
                 <div className="space-y-2">
                   <SignInButton mode="modal">
-                    <button className="w-full bg-transparent border border-magenta text-magenta px-5 py-2 rounded-full hover:bg-magenta hover:text-white transition-colors">
+                    <button className="w-full bg-transparent border border-green text-green px-5 py-2 rounded-full hover:bg-green hover:text-white transition-colors">
                       Sign In
                     </button>
                   </SignInButton>
                   <SignUpButton mode="modal">
-                    <button className="w-full bg-magenta text-white px-5 py-2 rounded-full hover:bg-black hover:text-magenta transition-colors">
+                    <button className="w-full bg-green text-white px-5 py-2 rounded-full hover:bg-black hover:text-green transition-colors">
                       Sign Up
                     </button>
                   </SignUpButton>

@@ -58,7 +58,7 @@ const Candidates = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="text-2xl md:text-5xl font-bold text-magenta mb-16 text-left" // Smaller on mobile
+        className="text-2xl md:text-5xl font-bold text-green mb-16 text-left" // Smaller on mobile
       >
         Why you should trust us with your career
       </motion.h2>
@@ -80,7 +80,7 @@ const Candidates = () => {
             className={`flex items-start border-b border-gray-200 pb-10 item`}
             data-index={index}
           >
-            <span className="font-bold text-magenta text-5xl md:text-6xl mr-12">{`0${index + 1}`}</span> {/* Adjusted to be smaller on mobile */}
+            <span className="font-bold text-green text-5xl md:text-6xl mr-12">{`0${index + 1}`}</span> {/* Adjusted to be smaller on mobile */}
             <p className={`text-gray-${index % 2 === 0 ? '800' : '600'} text-lg md:text-5xl`}>
               {item}
             </p>

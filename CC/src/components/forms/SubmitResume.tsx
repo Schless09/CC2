@@ -31,10 +31,10 @@ const SubmitResume = () => {
       </h1>
       <UploadButton
         endpoint="fileUploader"
-        className="ut-button:bg-magenta ut-button:ut-readying:bg-magenta2 ut-upload-icon:text-xl"
+        className="ut-button:bg-green ut-button:ut-readying:bg-green2 ut-upload-icon:text-xl"
         appearance={{
           button:
-            'ut-ready:bg-yorange ut-uploading:cursor-not-allowed rounded-lg bg-magenta hover:bg-magenta2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-magenta',
+            'ut-ready:bg-green2 ut-uploading:cursor-not-allowed rounded-lg bg-green hover:bg-green2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green',
           allowedContent:
             'flex h-12 flex-col items-center justify-center px-2 text-gray-700',
         }}

@@ -53,7 +53,7 @@ const InputField: React.FC<InputFieldProps> = ({
         value={value}
         onChange={onChange}
         required={required}
-        className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-magenta focus:border-transparent transition duration-200 text-gray-900'
+        className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition duration-200 text-gray-900'
       >
         <option value=''>Select {label}</option>
         {options.map(
@@ -72,7 +72,7 @@ const InputField: React.FC<InputFieldProps> = ({
       </select>
     ) : (
       <input
-        className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-magenta focus:border-transparent transition duration-200 text-gray-900'
+        className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition duration-200 text-gray-900'
         type={type}
         name={name}
         value={value}
@@ -250,7 +250,7 @@ const PostJob: React.FC<{ author: string }> = ({ author }) => {
   };
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-magenta-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8'>
+    <div className='min-h-screen bg-gradient-to-br from-green-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -355,7 +355,7 @@ const PostJob: React.FC<{ author: string }> = ({ author }) => {
                 Job Description
               </label>
               <textarea
-                className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-magenta focus:border-transparent transition duration-200 text-gray-900'
+                className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent transition duration-200 text-gray-900'
                 name='description'
                 value={description}
                 onChange={handleInputChange}
@@ -499,7 +499,7 @@ const PostJob: React.FC<{ author: string }> = ({ author }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type='submit'
-                className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-magenta hover:bg-magenta-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-magenta-500 transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed'
+                className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green2 transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed'
                 disabled={isLoading}
               >
                 {isLoading ? (

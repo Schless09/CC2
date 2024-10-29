@@ -6,10 +6,10 @@ const ReferredClientCard = ({ referral }: { referral: any }) => {
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case 'contacted': return 'bg-magenta';
+      case 'contacted': return 'bg-green';
       case 'engaged': return 'bg-orange-500';
       case 'inverviewing coa candidates': return 'bg-blue-500';
-      case 'hired coa candidate': return 'bg-green-400';
+      case 'hired coa candidate': return 'bg-green2';
       case 'referral paid out': return 'bg-green-600';
       case 'search closed - unsuccessful': return 'bg-gray-500';
       default: return 'bg-blue-500';
@@ -25,7 +25,7 @@ const ReferredClientCard = ({ referral }: { referral: any }) => {
     >
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-xl font-semibold text-magenta-400">
+          <h3 className="text-xl font-semibold text-green2">
             {referral.firstName} {referral.lastName}
           </h3>
           <p className="text-gray-400">{referral.email}</p>

@@ -64,7 +64,7 @@ const SelectUserField = ({ control, isLoading }: SelectUserFieldProps) => {
           <select
             value={introducedByFriend}
             onChange={(e) => setIntroducedByFriend(e.target.value)}
-            className="w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta focus:border-magenta"
+            className="w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
             disabled={isLoading}
           >
             <option value="">--</option>
@@ -87,7 +87,7 @@ const SelectUserField = ({ control, isLoading }: SelectUserFieldProps) => {
             control={control}
             render={({ field }) => (
               <div className="relative mt-1">
-                <div className="relative w-full bg-white border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-magenta focus-within:border-magenta">
+                <div className="relative w-full bg-white border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-green focus-within:border-green">
                   {field.value ? (
                     <div className="flex items-center p-2">
                       <Image
@@ -102,7 +102,7 @@ const SelectUserField = ({ control, isLoading }: SelectUserFieldProps) => {
                       </span>
                       <button
                         type="button"
-                        className="ml-auto text-gray-400 hover:text-magenta"
+                        className="ml-auto text-gray-400 hover:text-green"
                         onClick={() => {
                           field.onChange('');
                           setSearchTerm('');
@@ -115,7 +115,7 @@ const SelectUserField = ({ control, isLoading }: SelectUserFieldProps) => {
                   ) : (
                     <input
                       type="text"
-                      className="w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta focus:border-magenta sm:text-sm placeholder-gray-400"
+                      className="w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green focus:border-green sm:text-sm placeholder-gray-400"
                       placeholder="Search for a user..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
@@ -129,7 +129,7 @@ const SelectUserField = ({ control, isLoading }: SelectUserFieldProps) => {
                     {filteredUsers.map((user) => (
                       <li
                         key={user.userId}
-                        className="cursor-pointer select-none relative py-2 pl-3 pr-9 text-gray-700 hover:bg-magenta"
+                        className="cursor-pointer select-none relative py-2 pl-3 pr-9 text-gray-700 hover:bg-green"
                         onClick={() => {
                           field.onChange(user.userId);
                           setSearchTerm('');

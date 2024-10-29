@@ -128,13 +128,13 @@ const JobDetailCard = ({ user, jobOpening }: JobDetailProps) => {
     label='Company'
     value={
       isCompanyRevealed ? (
-        <Link href={jobOpening.companyWebsite} className='text-magenta underline'>
+        <Link href={jobOpening.companyWebsite} className='text-green underline'>
           {jobOpening.company}
         </Link>
       ) : (
         <button
           onClick={handleRevealCompanyInfo}
-          className='text-magenta underline text-sm md:text-base flex items-center'
+          className='text-green underline text-sm md:text-base flex items-center'
         >
           {user ? (
             <>
@@ -180,7 +180,7 @@ const JobDetailCard = ({ user, jobOpening }: JobDetailProps) => {
             className='space-y-2'
           >
             <div className='flex items-start space-x-1'>
-              <DocumentTextIcon className='h-4 w-4 md:h-5 md:w-5 text-magenta' />
+              <DocumentTextIcon className='h-4 w-4 md:h-5 md:w-5 text-green' />
               <p className='text-sm md:text-base font-semibold text-gray-800'>Description:</p>
             </div>
             <div className='ml-5'>
@@ -211,7 +211,7 @@ const JobDetailCard = ({ user, jobOpening }: JobDetailProps) => {
               <XIcon className='h-3 w-3 md:h-5 md:w-5' />
             </button>
             <div className='flex items-center space-x-1 mb-2'>
-              <KeyIcon className='h-4 w-4 md:h-6 md:w-6 text-magenta' />
+              <KeyIcon className='h-4 w-4 md:h-6 md:w-6 text-green' />
               <h2 className='text-sm md:text-lg font-semibold text-gray-800'>
                 Key Criteria outlined by the Hiring Manager
               </h2>
@@ -236,7 +236,7 @@ interface InfoItemProps {
 
 const InfoItem: FC<InfoItemProps> = ({ icon: Icon, label, value }) => (
   <div className='flex items-start space-x-2'>
-    {Icon && <Icon className='h-3 w-3 md:h-5 md:w-5 text-magenta mt-0.5' />}
+    {Icon && <Icon className='h-3 w-3 md:h-5 md:w-5 text-green mt-0.5' />}
     <p className='text-2xs md:text-base text-gray-800'>
       <span className='font-semibold'>{label}:</span>{' '}
       <span className='text-gray-600'>{value}</span>

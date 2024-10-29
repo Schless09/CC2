@@ -37,7 +37,7 @@ const JobActions2 = ({ jobOpening, user }: JobDetailProps) => {
     : '';
 
   const buttonClass =
-    'flex items-center px-2 py-1 bg-gray-300 text-black rounded hover:bg-magenta hover:text-white transition-colors h-8 text-xs sm:text-sm whitespace-nowrap';
+    'flex items-center px-2 py-1 bg-gray-300 text-black rounded hover:bg-green hover:text-white transition-colors h-8 text-xs sm:text-sm whitespace-nowrap';
 
   return (
     <div className='flex flex-wrap items-center gap-2'>

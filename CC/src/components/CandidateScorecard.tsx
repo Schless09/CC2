@@ -123,7 +123,7 @@ const CandidateScorecard: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen p-10">
       <div className="max-w-4xl mx-auto mt-0">
-        <h1 className="text-3xl font-bold mb-6 text-magenta">Candidate Interview Scorecard</h1>
+        <h1 className="text-3xl font-bold mb-6 text-green">Candidate Interview Scorecard</h1>
         <div className="mb-4">
           <label htmlFor="submittedBy" className="block text-lg font-semibold mb-1">
             Interviewed By
@@ -131,7 +131,7 @@ const CandidateScorecard: React.FC = () => {
           <input
             type="text"
             id="submittedBy"
-            className="w-full bg-gray-800 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta"
+            className="w-full bg-gray-800 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green"
             placeholder="Enter your name"
             value={submittedBy}
             onChange={(e) => setSubmittedBy(e.target.value)}
@@ -144,7 +144,7 @@ const CandidateScorecard: React.FC = () => {
           <input
             type="text"
             id="candidateName"
-            className="w-full bg-gray-800 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta"
+            className="w-full bg-gray-800 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green"
             placeholder="Enter candidate's name"
             value={candidateName}
             onChange={(e) => setCandidateName(e.target.value)}
@@ -162,8 +162,8 @@ const CandidateScorecard: React.FC = () => {
                   onClick={() => handleRating(section.id, star)}
                   className={`h-8 w-8 flex items-center justify-center ${
                     star <= section.rating
-                      ? 'text-magenta'
-                      : 'text-gray-500 hover:text-magenta transition-colors duration-200'
+                      ? 'text-green'
+                      : 'text-gray-500 hover:text-green transition-colors duration-200'
                   }`}
                 >
                   <StarIcon className="h-5 w-5" />
@@ -171,7 +171,7 @@ const CandidateScorecard: React.FC = () => {
               ))}
             </div>
             <textarea
-              className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta resize-none"
+              className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green resize-none"
               placeholder="Add notes..."
               value={section.notes}
               onChange={(e) => handleNotesChange(section.id, e.target.value)}
@@ -188,7 +188,7 @@ const CandidateScorecard: React.FC = () => {
         <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold mb-2">Decision</h2>
           <select
-            className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta"
+            className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green"
             value={decision}
             onChange={(e) => {
               setDecision(e.target.value);
@@ -208,7 +208,7 @@ const CandidateScorecard: React.FC = () => {
           <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow-lg">
             <h2 className="text-xl font-semibold mb-2">Additional Feedback</h2>
             <textarea
-              className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta resize-none"
+              className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green resize-none"
               placeholder="Please provide additional feedback that might be helpful for us going forward..."
               value={additionalFeedback}
               onChange={(e) => setAdditionalFeedback(e.target.value)}
@@ -220,7 +220,7 @@ const CandidateScorecard: React.FC = () => {
             <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow-lg">
               <h2 className="text-xl font-semibold mb-2">Overall Notes</h2>
               <textarea
-                className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-magenta resize-none"
+                className="w-full bg-gray-700 text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green resize-none"
                 placeholder="Please provide any additional feedback for Hire or Advance..."
                 value={overallNotes}
                 onChange={(e) => setOverallNotes(e.target.value)}
@@ -231,7 +231,7 @@ const CandidateScorecard: React.FC = () => {
         )}
         <button
           onClick={handleSubmit}
-          className="bg-magenta hover:bg-magenta-700 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
+          className="bg-green hover:bg-green2 text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
         >
           Submit Scorecard
         </button>

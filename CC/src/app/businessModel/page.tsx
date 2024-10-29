@@ -21,7 +21,7 @@ export default function BusinessModel() {
                 
             </p>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-10">
-                We prioritize rewarding your efforts. Earn <span className="font-bold text-magenta">$6,000</span> for your first successful referral, <span className="font-bold text-magenta">$9,000</span> for your second, and <span className="font-bold text-magenta">$12,000</span> for your third and any additional referrals. 
+                We prioritize rewarding your efforts. Earn <span className="font-bold text-green">$6,000</span> for your first successful referral, <span className="font-bold text-green">$9,000</span> for your second, and <span className="font-bold text-green">$12,000</span> for your third and any additional referrals. 
                 Start maximizing your income today—your network can be your greatest asset!
             </p>
         </section>
@@ -44,16 +44,16 @@ export default function BusinessModel() {
                         <p className="text-lg text-gray-700 leading-relaxed max-w-lg mb-4">
                             Our referral program is simple and lucrative. Refer  
                             <Link href="/referrals">
-                                <span className="text-magenta hover:text-yorange cursor-pointer"> candidates</span>
+                                <span className="text-green hover:text-green2 cursor-pointer"> candidates</span>
                             </Link> or  
                             <Link href="/introClient">
-                                <span className="text-magenta hover:text-yorange cursor-pointer"> clients</span>
+                                <span className="text-green hover:text-green2 cursor-pointer"> clients</span>
                             </Link>, and let our team of recruiters do the heavy lifting. 
                             <br />
                             <br />
                             Track all your referrals and earnings through your personal 
                             <Link href="/dashboard">
-                                <span className="text-magenta hover:text-yorange cursor-pointer"> dashboard</span>
+                                <span className="text-green hover:text-green2 cursor-pointer"> dashboard</span>
                             </Link>.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ export default function BusinessModel() {
 
                 <div className="flex justify-center space-x-4 mb-8">
                     <Link href="/referrals">
-                        <span className="bg-magenta text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-magenta/80 transition-colors shadow-md transform hover:scale-105">
+                        <span className="bg-green text-white py-3 px-8 rounded-lg text-lg font-medium hover:bg-green/80 transition-colors shadow-md transform hover:scale-105">
                             Refer Candidates
                         </span>
                     </Link>
@@ -95,7 +95,7 @@ export default function BusinessModel() {
                 <div className="mt-8">
                     <p className="text-gray-700 mb-2">Still have questions?</p> {/* Added mb-2 for spacing */}
                     <Link href="/learn-more">
-                        <span className="text-magenta hover:text-magenta/80 underline cursor-pointer">Schedule time to learn more about our business model</span>
+                        <span className="text-green hover:text-green/80 underline cursor-pointer">Schedule time to learn more about our business model</span>
                     </Link>
                 </div>
             </section>

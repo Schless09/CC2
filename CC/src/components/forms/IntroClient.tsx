@@ -74,7 +74,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
     <div className='flex flex-col items-center min-h-screen bg-slate-100 px-4 py-10'>
       <div className='w-full max-w-lg bg-white rounded-lg shadow-lg p-6 md:p-8'>
         <div className='text-center'>
-          <h1 className='text-2xl md:text-3xl font-bold text-magenta'>
+          <h1 className='text-2xl md:text-3xl font-bold text-green'>
             Introduce Us to a Hiring Manager
           </h1>
           <p className='text-sm md:text-base text-gray-600 mt-4'>
@@ -82,7 +82,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
           </p>
         </div>
         <div className='mt-6'>
-          <h2 className='text-lg md:text-xl mb-4 font-semibold text-magenta'>
+          <h2 className='text-lg md:text-xl mb-4 font-semibold text-green'>
             Intro via Email
           </h2>
           <form onSubmit={handleSubmit} className='space-y-6'>
@@ -93,7 +93,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
               <input
                 type='text'
                 id='firstName'
-                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-magenta'
+                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green'
                 value={emailFirstName}
                 onChange={(e) => setEmailFirstName(e.target.value)}
               />
@@ -105,7 +105,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
               <input
                 type='text'
                 id='lastName'
-                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-magenta'
+                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green'
                 value={emailLastName}
                 onChange={(e) => setEmailLastName(e.target.value)}
               />
@@ -117,7 +117,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
               <input
                 type='text'
                 id='company'
-                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-magenta'
+                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green'
                 value={emailCompany}
                 onChange={(e) => setEmailCompany(e.target.value)}
               />
@@ -129,7 +129,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
               <input
                 type='email'
                 id='email'
-                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-magenta'
+                className='w-full px-4 py-2 border rounded-md bg-slate-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-green'
                 value={emailAddress}
                 onChange={(e) => setEmailAddress(e.target.value)}
               />
@@ -137,7 +137,7 @@ const IntroClientForm = ({ user }: { user: any }) => {
             <Button
               type='submit'
               size='lg'
-              className='w-full bg-magenta hover:bg-magenta/80 flex items-center gap-4 relative'
+              className='w-full bg-green hover:bg-green/80 flex items-center gap-4 relative'
               disabled={isLoading}
             >
               {isLoading && <Loader isSmall />}

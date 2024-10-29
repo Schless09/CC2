@@ -82,7 +82,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
     <div className='min-h-screen flex flex-col justify-center items-center p-6 bg-slate-100'>
       <div className='w-full max-w-md bg-white rounded-lg shadow-lg p-8 border border-gray-300'>
         <div className='text-center mb-6'>
-          <h1 className='text-2xl font-bold text-magenta mb-2'>
+          <h1 className='text-2xl font-bold text-green mb-2'>
             Submit Candidate Referral
           </h1>
           <p className='text-gray-600'>
@@ -90,7 +90,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
             one of our clients.
           </p>
         </div>
-        <h2 className='text-magenta text-lg font-semibold mb-4'>
+        <h2 className='text-green text-lg font-semibold mb-4'>
           Intro via Email
         </h2>
 
@@ -103,7 +103,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
               First Name
             </label>
             <input
-              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-magenta'
+              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green'
               type='text'
               id='firstName'
               name='firstName'
@@ -123,7 +123,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
               Last Name
             </label>
             <input
-              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-magenta'
+              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green'
               type='text'
               id='lastName'
               name='lastName'
@@ -143,7 +143,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
               LinkedIn URL (optional)
             </label>
             <input
-              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-magenta'
+              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green'
               type='text'
               id='linkedinURL'
               name='linkedinURL'
@@ -159,7 +159,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
               Email
             </label>
             <input
-              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-magenta'
+              className='w-full px-4 py-2 rounded-md bg-gray-50 border border-gray-300 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green'
               type='email'
               id='email'
               name='email'
@@ -175,7 +175,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
             <Button
               type='submit'
               size='lg'
-              className='bg-magenta text-white hover:bg-magenta2 focus:ring-2 focus:ring-magenta2 focus:outline-none'
+              className='bg-green text-white hover:bg-green2 focus:ring-2 focus:ring-green2 focus:outline-none'
               disabled={isLoading}
             >
               {isLoading && <Loader isSmall />}

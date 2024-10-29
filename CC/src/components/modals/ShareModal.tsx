@@ -67,10 +67,10 @@ const ShareModal = ({ isOpen, onClose, jobId, jobTitle, user }: ModalProps) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg">
         <div className="relative p-6">
-          <h2 className="text-2xl font-semibold text-center text-magenta mb-6">Share via Email</h2>
+          <h2 className="text-2xl font-semibold text-center text-green mb-6">Share via Email</h2>
           <button
             onClick={handleClose}
-            className="absolute top-4 right-4 text-gray-500 hover:text-magenta transition-colors duration-200"
+            className="absolute top-4 right-4 text-gray-500 hover:text-green transition-colors duration-200"
           >
             <XIcon className="w-6 h-6" />
           </button>

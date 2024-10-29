@@ -12,7 +12,7 @@ const BlogSection: React.FC<{ title: string; posts: BlogPost[]; isFeatured?: boo
   isFeatured,
 }) => (
   <section className={isFeatured ? 'mb-16' : ''}>
-    <h2 className="text-3xl font-semibold text-magenta mb-8">{title}</h2>
+    <h2 className="text-3xl font-semibold text-green mb-8">{title}</h2>
     {isFeatured ? (
       <FeaturedPosts posts={posts} />
     ) : (
@@ -28,7 +28,7 @@ const BlogSection: React.FC<{ title: string; posts: BlogPost[]; isFeatured?: boo
 const BlogLandingPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen font-sans">
-      <header className="bg-magenta text-white py-16">
+      <header className="bg-green text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-4">Blog</h1>
           <p className="text-xl max-w-2xl mx-auto">
@@ -43,11 +43,7 @@ const BlogLandingPage: React.FC = () => {
         <BlogSection title="Recent Posts" posts={blogPosts} />
       </main>
 
-      <footer className="bg-magenta py-8 mt-16">
-        <div className="container mx-auto px-6 text-center text-white">
-          <p>&copy; 2024 Your Company Name. All rights reserved.</p>
-        </div>
-      </footer>
+      <footer className="bg-green py-6 mt-16"></footer>
     </div>
   );
 };

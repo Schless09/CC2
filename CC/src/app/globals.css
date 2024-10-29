@@ -58,11 +58,11 @@
   }
 
   .input-field {
-    @apply focus:ring-2 focus:ring-magenta bg-gray-700 text-gray-100 placeholder-gray-400 !important;
+    @apply focus:ring-2 focus:ring-green bg-gray-700 text-gray-100 placeholder-gray-400 !important;
   }
 
   .submit-btn {
-    @apply w-full text-sm bg-magenta hover:bg-magenta2 flex items-center justify-center gap-4 py-3 px-5 mt-4 rounded-md transition duration-300 !important;
+    @apply w-full text-sm bg-green hover:bg-green2 flex items-center justify-center gap-4 py-3 px-5 mt-4 rounded-md transition duration-300 !important;
   }
 
   .select-item {
@@ -70,10 +70,10 @@
   }
 
   .referral-selector-upload-btn {
-    @apply w-full flex items-center justify-center gap-2 rounded-md font-bold mt-6 text-sm border border-magenta text-magenta bg-transparent hover:opacity-80 transition ease-in duration-150 capitalize !important;
+    @apply w-full flex items-center justify-center gap-2 rounded-md font-bold mt-6 text-sm border border-green text-green bg-transparent hover:opacity-80 transition ease-in duration-150 capitalize !important;
   }
   .referral-selector-btn {
-    @apply bg-magenta hover:bg-magenta2 text-base capitalize flex items-center gap-4 relative !important;
+    @apply bg-green hover:bg-green2 text-base capitalize flex items-center gap-4 relative !important;
   }
 
   .modal-wrapper {
@@ -85,6 +85,6 @@
   }
 
   .mui-icon {
-    @apply text-gray-400 hover:text-magenta cursor-pointer;
+    @apply text-gray-400 hover:text-green cursor-pointer;
   }
 }

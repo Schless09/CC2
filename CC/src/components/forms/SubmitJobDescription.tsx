@@ -31,7 +31,7 @@ const SubmitJobDescription = () => {
       </h1>
       <UploadButton
         endpoint="fileUploader"
-        className="ut-button:bg-magenta ut-button:ut-readying:bg-magenta/90 ut-upload-icon:text-xl"
+        className="ut-button:bg-green ut-button:ut-readying:bg-green/90 ut-upload-icon:text-xl"
         appearance={{
           button:
             'ut-ready:bg-green-600 ut-uploading:cursor-not-allowed rounded-lg bg-green-500 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500',

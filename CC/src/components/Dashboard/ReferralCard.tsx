@@ -6,7 +6,7 @@ const ReferralCard = ({ referral }: { referral: any }) => {
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case 'contacted': return 'bg-magenta';
+      case 'contacted': return 'bg-green';
       case 'active': return 'bg-orange-500';
       case 'interviewing w/ coa client': return 'bg-blue-500';
       case 'hired': return 'bg-green-500';
@@ -25,7 +25,7 @@ const ReferralCard = ({ referral }: { referral: any }) => {
     >
       <div className="flex justify-between items-start">
         <div>
-          <h3 className="text-xl font-semibold text-magenta-400">
+          <h3 className="text-xl font-semibold text-green2">
             {referral.firstName} {referral.lastName}
           </h3>
           <p className="text-gray-400">{referral.email}</p>

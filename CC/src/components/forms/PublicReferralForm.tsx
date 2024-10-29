@@ -78,13 +78,13 @@ const PublicReferralForm: React.FC<Props> = ({
                     <SelectContent className='bg-slate-100 border border-slate-300 rounded-md mt-1 w-full max-h-40 overflow-auto'>
                       <SelectItem
                         value='Hiring SWE Talent'
-                        className='py-2 px-3 text-black hover:bg-magenta hover:text-white transition-colors'
+                        className='py-2 px-3 text-black hover:bg-green hover:text-white transition-colors'
                       >
                         Hiring SWE Talent
                       </SelectItem>
                       <SelectItem
                         value='Exploring New Opportunities'
-                        className='py-2 px-3 text-black hover:bg-magenta hover:text-white transition-colors'
+                        className='py-2 px-3 text-black hover:bg-green hover:text-white transition-colors'
                       >
                         Exploring New Opportunities
                       </SelectItem>
@@ -187,7 +187,7 @@ const PublicReferralForm: React.FC<Props> = ({
         <Button
           type='submit'
           size='lg'
-          className='bg-magenta text-white hover:bg-magenta2 focus:ring-2 focus:ring-magenta2 focus:outline-none'
+          className='bg-green text-white hover:bg-green2 focus:ring-2 focus:ring-green2 focus:outline-none'
           disabled={isLoading}
         >
           {isLoading && <Loader isSmall />}

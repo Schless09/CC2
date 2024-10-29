@@ -39,7 +39,7 @@ const JobCard = ({ jobData, userData, addHoverEffects }: JobCardProps) => {
       <div className="p-4 flex-grow flex flex-col">
         <div className="flex justify-between items-start mb-2">
           <Link href={`/openings/${jobData._id}`}>
-            <h2 className="text-xl font-bold text-magenta hover:text-gray-500 transition duration-300">
+            <h2 className="text-xl font-bold text-green hover:text-gray-500 transition duration-300">
               {jobData.title}
             </h2>
           </Link>
@@ -69,7 +69,7 @@ const JobCard = ({ jobData, userData, addHoverEffects }: JobCardProps) => {
 
         {/* Button pinned to the bottom */}
         <Link href={`/openings/${jobData._id}`}>
-          <button className="w-full bg-magenta text-white py-2 rounded-md text-sm border border-magenta hover:bg-white hover:text-magenta transition duration-300">
+          <button className="w-full bg-green text-white py-2 rounded-md text-sm border border-green hover:bg-white hover:text-green transition duration-300">
             View Details
           </button>
         </Link>

@@ -37,7 +37,7 @@ const TrackReferrals = () => {
           variants={imageVariants}
         >
           <div className="relative group">
-            <div className="absolute -inset-1 bg-magenta rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-green rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative">
               <Image 
                 src="/images/dashboard2.jpeg" 
@@ -58,7 +58,7 @@ const TrackReferrals = () => {
           variants={textVariants}
         >
           <header>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-magenta to-yorange">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green to-green2">
               Monitor Your Referral Success in Real-Time
             </h2>
           </header>
@@ -68,7 +68,7 @@ const TrackReferrals = () => {
           <ul className="mb-8 space-y-4">
             {['Real-time updates', 'Detailed statistics', 'Reward tracking'].map((feature, index) => (
               <li key={index} className="flex items-center">
-                <svg className="w-6 h-6 mr-2 text-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6 mr-2 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span className="text-lg text-gray-800">{feature}</span>
@@ -76,7 +76,7 @@ const TrackReferrals = () => {
             ))}
           </ul>
           <Link href="/dashboard" passHref>
-            <span className="inline-flex items-center bg-magenta text-white py-3 px-8 focus:outline-none hover:bg-transparent border-2 border-magenta hover:text-magenta rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+            <span className="inline-flex items-center bg-green text-white py-3 px-8 focus:outline-none hover:bg-transparent border-2 border-green hover:text-green rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
               View Dashboard
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

@@ -31,13 +31,13 @@ const DashboardClient = ({ user }: { user: any }) => {
     <div className="min-h-screen bg-gray-100 text-white">
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-magenta mb-4">Welcome, {user.firstName}!</h1>
+          <h1 className="text-4xl font-bold text-green mb-4">Welcome, {user.firstName}!</h1>
           <div className="flex space-x-4">
-            <button onClick={handleGenerate} className="flex items-center text-magenta px-4 py-2 bg-transparent rounded-full hover:text-magenta hover:border-2 hover:border-magenta">
+            <button onClick={handleGenerate} className="flex items-center text-green px-4 py-2 bg-transparent rounded-full hover:text-green hover:border-2 hover:border-green">
               <ContentCopy className="mr-2" />
               Copy Referral Link
             </button>
-            <button onClick={handleShareToLinkedIn} className="flex items-center px-4 py-2 bg-magenta rounded-full hover:bg-white hover:border-2 hover:border-magenta hover:text-magenta">
+            <button onClick={handleShareToLinkedIn} className="flex items-center px-4 py-2 bg-green rounded-full hover:bg-white hover:border-2 hover:border-green hover:text-green">
               <LinkedIn className="mr-2" />
               Share Referral Code on LinkedIn
             </button>
@@ -55,13 +55,13 @@ const DashboardClient = ({ user }: { user: any }) => {
         <div className="bg-gray-800 rounded-lg shadow-lg p-6">
           <div className="flex mb-4">
             <button 
-              className={`mr-4 pb-2 ${activeTab === 'candidates' ? 'border-b-2 border-magenta' : ''}`}
+              className={`mr-4 pb-2 ${activeTab === 'candidates' ? 'border-b-2 border-green' : ''}`}
               onClick={() => setActiveTab('candidates')}
             >
               Candidate Referrals
             </button>
             <button 
-              className={`pb-2 ${activeTab === 'clients' ? 'border-b-2 border-magenta' : ''}`}
+              className={`pb-2 ${activeTab === 'clients' ? 'border-b-2 border-green' : ''}`}
               onClick={() => setActiveTab('clients')}
             >
               Client Introductions
@@ -71,7 +71,7 @@ const DashboardClient = ({ user }: { user: any }) => {
           {activeTab === 'candidates' && (
             <div className="space-y-4">
               {user.referrals.length === 0 ? (
-                <p className="text-center text-gray-400">No candidate referrals yet. <Link href="/referrals" className="text-magenta hover:underline">Submit your first referral</Link>.</p>
+                <p className="text-center text-gray-400">No candidate referrals yet. <Link href="/referrals" className="text-green hover:underline">Submit your first referral</Link>.</p>
               ) : (
                 user.referrals.map((referral: any) => (
                   <ReferralCard key={referral._id} referral={referral} />
@@ -83,7 +83,7 @@ const DashboardClient = ({ user }: { user: any }) => {
           {activeTab === 'clients' && (
             <div className="space-y-4">
               {user.clientReferrals.length === 0 ? (
-                <p className="text-center text-gray-400">No client introductions yet. <Link href="/introClient" className="text-magenta hover:underline">Submit your first introduction</Link>.</p>
+                <p className="text-center text-gray-400">No client introductions yet. <Link href="/introClient" className="text-green hover:underline">Submit your first introduction</Link>.</p>
               ) : (
                 user.clientReferrals.map((referral: any) => (
                   <ReferredClientCard key={referral._id} referral={referral} />
@@ -103,7 +103,7 @@ const DashboardCard = ({ icon, title, value }: { icon: React.ReactNode, title: s
     whileHover={{ scale: 1.05 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <div className="bg-magenta-600 rounded-full p-3 mr-4">{icon}</div>
+    <div className="bg-green-600 rounded-full p-3 mr-4">{icon}</div>
     <div>
       <h3 className="text-lg font-semibold">{title}</h3>
       <p className="text-3xl font-bold">{value}</p>

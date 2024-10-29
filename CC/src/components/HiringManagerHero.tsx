@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const HiringManagerHero = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <section className="bg-magenta text-white body-font rounded-2xl p-6 sm:p-10 relative overflow-hidden">
+      <section className="bg-green text-white body-font rounded-2xl p-6 sm:p-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/path-to-your-texture-image.png')] opacity-10 mix-blend-overlay"></div>
         <div className="flex flex-col items-center justify-center min-h-[40vh] relative z-10">
           <div className="text-center w-full max-w-4xl">
@@ -38,7 +38,7 @@ const HiringManagerHero = () => {
             </motion.div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-magenta to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-green to-transparent"></div>
       </section>
     </div>
   );
