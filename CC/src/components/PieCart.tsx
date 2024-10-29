@@ -76,7 +76,7 @@ const PieChart: React.FC<PieChartProps> = ({ percentage, title, amount }) => {
           cy="21"
           r={radius}
           fill="transparent"
-          stroke="#C90D5EFF" 
+          stroke="##128940FF" 
           strokeWidth="4"
           strokeDasharray={circumference} // Use the total circumference
           strokeDashoffset={circumference} // Start full and animate down
