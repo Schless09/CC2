@@ -32,7 +32,7 @@ const Header = () => {
       <header
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-black bg-opacity-90 backdrop-blur-md py-3 shadow-lg' // Added shadow for style
+            ? 'bg-black bg-opacity-90 backdrop-blur-md py-3 shadow-lg'
             : 'bg-black py-8'
         } border-b-2 border-green`} 
       >
