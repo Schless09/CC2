@@ -27,7 +27,7 @@ const config = withUt({
         yorange3: '#ffc101',
         magenta: '#C90D5EFF',
         magenta2: '#D02D6EFF',
-        green: '#128940FF',
+        green: '#128940',
         green2: '#259B1DFF',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -76,7 +76,7 @@ const PieChart: React.FC<PieChartProps> = ({ percentage, title, amount }) => {
           cy="21"
           r={radius}
           fill="transparent"
-          stroke="#128940FF" 
+          stroke="#128940" 
           strokeWidth="4"
           strokeDasharray={circumference} // Use the total circumference
           strokeDashoffset={circumference} // Start full and animate down
@@ -87,7 +87,7 @@ const PieChart: React.FC<PieChartProps> = ({ percentage, title, amount }) => {
       {/* Amount below the pie chart */}
       <h2 className="text-xl md:text-2xl font-bold text-center text-gray-700">
         <span>
-          ${count.toLocaleString()} {/* Display the count with dollar sign */}
+          ${count.toLocaleString()}
         </span>
       </h2>
     </div>

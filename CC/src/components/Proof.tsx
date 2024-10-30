@@ -9,7 +9,7 @@ const colors = {
   magenta: '#C90D5EFF',
   black: '#000000',
   lightGrey: '#f7f7f7',
-  green: '#128940FF'
+  green: '#128940'
 };
 
 const useIntersectionObserver = (options: IntersectionObserverInit = {}) => {
