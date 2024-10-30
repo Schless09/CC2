@@ -33,7 +33,7 @@ export default async function Home() {
       <TechCompanies />
 
       {openings && openings.length > 2 && (
-        <div className='hidden md:block my-12 lg:my-16 w-full'> 
+        <div className='hidden container md:block my-12 lg:my-16 w-full'> 
           <h1 className='text-4xl font-bold text-gray-800 text-center mb-8'>
             <Link href="/openings">
               <span className='text-black hover:underline hover:text-green'>Job Openings</span>

@@ -39,8 +39,8 @@ const Carousel = ({
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className='bg-transparent flex items-center justify-center' />
-      <CarouselNext className='bg-transparent flex items-center justify-center' />
+      <CarouselPrevious className='bg-transparent text-green flex items-center justify-center' />
+      <CarouselNext className='bg-transparent text-green flex items-center justify-center' />
     </CarouselUI>
   );
 };
