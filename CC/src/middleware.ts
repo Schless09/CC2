@@ -22,7 +22,7 @@ export default authMiddleware({
     '/hiring-manager',
     '/hiring-manager/intake',
     '/hiring-manager/ScheduleTimeToChat',
-    '/hiring-manager/dashboard',
+    '/hiring-manager/technical-scorecard',
     '/via/ref',
   ],
   ignoredRoutes: ['/static', '/_vercel/speed-insights/vitals'],
