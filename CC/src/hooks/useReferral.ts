@@ -121,8 +121,8 @@ const useReferral = (introducedBy: string | null) => {
       const isHiringAccountTalent = userType === 'Hiring SWE Talent';
       const fileUrlKey = isHiringAccountTalent ? 'fileUrl' : 'resumeUrl';
       const successUrl = isHiringAccountTalent
-        ? 'https://cal.com/andrew-schuessler-ckha17/30min'
-        : 'https://calendly.com/andrew-schuessler-2/candidate-call';
+        ? 'https://cal.com/andrew-schuessler-xrp0oa/discuss-job-details'
+        : 'https://cal.com/andrew-schuessler-xrp0oa/20';
 
       await handleFileUpload(files, fileUrlKey, values);
 

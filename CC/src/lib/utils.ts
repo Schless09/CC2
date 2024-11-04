@@ -32,8 +32,6 @@ export const parseDate = (value: string) =>
     day: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
-    // second: '2-digit',
-    // timeZone: 'America/Los_Angeles', // Pacific time zone
   });
 
 /**
@@ -115,7 +113,7 @@ export const jobOpeningEmailMessage = ({
       ${jobTitle}</a> roles we're currently looking to fill.
     </p>
     <p>
-      Please review the job posting and <a href="https://calendly.com/chart-of-accountants/candidate-call" target="_blank" className="text-blue-700 underline">schedule time to chat</a> at your convenience.
+      Please review the job posting and <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" className="text-blue-700 underline">schedule time to chat</a> at your convenience.
     </p>
 
     <p>
@@ -161,7 +159,7 @@ export const referralEmailMessage = ({
     </p>
     <p>
       I’d love to learn more about your professional background and career goals. Please 
-      <a href="https://calendly.com/chart-of-accountants/candidate-call" target="_blank" className="text-blue-700 underline">schedule a time to chat</a> at your earliest convenience.
+      <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" className="text-blue-700 underline">schedule a time to chat</a> at your earliest convenience.
     </p>
     <p>
       Full disclosure, ${userFirstName} receives a referral bonus if you end up being hired
@@ -199,7 +197,7 @@ export const referralStatusEmailMessage = ({
     
     <p>You can view the latest updates and track each of your referrals by visiting your <a href='https://theCoder Collective.com/dashboard/' target='_blank' rel="noopener noreferrer" class='text-blue-700 underline'>dashboard</a>.</p>
    
-    <p>Have someone else you'd like to introduce to Coder Collective? Consider submitting additional candidate referrals or client introductions! You can start by visiting the <a href="https://www.theCoder Collective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Candidate Referrals</a> page or the <a href="https://www.theCoder Collective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Client Introduction</a> page. Each link will guide you through the process.</p>
+    <p>Have someone else you'd like to introduce to Coder Collective? Consider submitting additional candidate referrals or client introductions! You can start by visiting the <a href="https://www.theCoderCollective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Candidate Referrals</a> page or the <a href="https://www.theCoderCollective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Client Introduction</a> page. Each link will guide you through the process.</p>
    
     <p>If you have any questions or need assistance, please don't hesitate to reach out to us.</p>
    

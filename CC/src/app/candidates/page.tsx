@@ -13,7 +13,6 @@ const page = () => {
         <Candidates />
         <div className='my-12 lg:my-16 w-full'>
         <CalEmbed />
-        {/* <CalendlyEmbed url='https://calendly.com/andrew-schuessler-2/candidate-call' /> */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> {/* Added container */}
           <FeaturedPosts posts={blogPosts.slice(0, 3)} />
         </div>
