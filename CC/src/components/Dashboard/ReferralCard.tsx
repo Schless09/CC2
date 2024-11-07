@@ -9,7 +9,7 @@ const ReferralCard = ({ referral }: { referral: any }) => {
       case 'contacted': return 'bg-green';
       case 'active': return 'bg-orange-500';
       case 'interviewing w/ coa client': return 'bg-blue-500';
-      case 'hired': return 'bg-green-500';
+      case 'hired': return 'bg-cyan-500';
       case 'inactive': return 'bg-gray-500';
       case 'rejected': return 'bg-red-500';
       default: return 'bg-blue-500';
