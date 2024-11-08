@@ -20,7 +20,7 @@ const AccessDenied = ({
         <Typography
           variant={isSmallScreen ? 'h4' : 'h3'}
           component='h3'
-          className='font-bold text-center'
+          className='font-bold text-black text-center'
         >
           {title}
         </Typography>
