@@ -6,7 +6,7 @@ import Tolstoy from './Tolstoy';
 import { useInView } from 'react-intersection-observer';
 
 const HiringManager = () => {
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.3 });
 
   // Animation variants
   const variants = {

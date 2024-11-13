@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import { areasOfExpertise } from "@/app/constants";
 
 const HiringManagerHero = () => {
@@ -10,73 +9,66 @@ const HiringManagerHero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % areasOfExpertise.length);
-    }, 2500);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="container mx-auto px-6 sm:px-8 py-12 sm:py-16 lg:py-20 flex items-center justify-center">
-      <section className="relative overflow-hidden shadow-lg rounded-2xl text-white bg-green p-10 sm:p-12 lg:p-16 flex flex-col items-center justify-center w-full">
-
-        {/* Animated Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green via-green2 to-green animate-pulse-slow opacity-30 pointer-events-none"></div>
-
-        {/* Progress Dots */}
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-          {areasOfExpertise.map((_, idx) => (
-            <div
-              key={idx}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/40'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Main Content */}
-        <div className="text-center">
-          
-          {/* Header Text */}
+    <div className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-white to-gray-50">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-4xl mx-auto px-6 py-16"
+      >
+        <div className="text-center space-y-6">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-2"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
               Your Partner in Finding
             </h1>
-            <p className="text-2xl sm:text-3xl mt-2 text-white/90"> {/* Reduced margin-top */}
+            <p className="text-2xl md:text-3xl text-gray-600 font-medium">
               Exceptional
             </p>
           </motion.div>
 
-          {/* Rotating Expertise Text */}
-          <div className="relative w-full h-20 sm:h-24 mt-4 sm:mt-6 mb-4"> {/* Reduced margin-top and margin-bottom */}
+          <div className="h-24 flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: 0,
+                  transition: {
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15
+                  }
+                }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="mx-auto text-3xl sm:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/90"
+                className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
               >
                 {areasOfExpertise[currentIndex].name}
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Subtext */}
-          <p className="text-2xl sm:text-3xl text-white/90">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl md:text-3xl text-gray-600 font-medium"
+          >
             Talent
-          </p>
+          </motion.p>
         </div>
-
-        {/* Gradient Fade at Bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-green to-transparent"></div>
-      </section>
+      </motion.section>
     </div>
   );
 };
