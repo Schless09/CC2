@@ -10,7 +10,7 @@ const HiringManagerHero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % areasOfExpertise.length);
-    }, 4000);
+    }, 2500);
 
     return () => clearInterval(timer);
   }, []);
@@ -72,16 +72,6 @@ const HiringManagerHero = () => {
           <p className="text-2xl sm:text-3xl text-white/90">
             Talent
           </p>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            className="mt-12"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
-          >
-            <ChevronDown className="w-6 h-6 text-white/70 animate-bounce mx-auto" />
-          </motion.div>
         </div>
 
         {/* Gradient Fade at Bottom */}
