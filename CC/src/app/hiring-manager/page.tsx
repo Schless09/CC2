@@ -7,7 +7,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import HiringManager from '@/components/HiringManager';
-import HMItems from '@/components/HMItems';
 import HiringManagerHero from '@/components/HiringManagerHero';
 import CalEmbedHiringManager from '@/components/CalEmbedHiringManager';
 
@@ -32,15 +31,6 @@ const Recruitment = () => {
 
       {/* Main Content */}
       <main className="py-20 px-4 sm:px-6 lg:px-8 space-y-32">
-        <Carousel
-          opts={{ align: 'start', loop: true }}
-          className="w-full max-w-7xl mx-auto"
-          plugins={[plugin.current]}
-        >
-          <CarouselContent>
-            <HMItems /> 
-          </CarouselContent>
-        </Carousel>
 
         {/* Hiring Manager Section */}
         <div className="py-12 px-6 md:px-12 max-w-7xl mx-auto">
