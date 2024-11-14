@@ -1,4 +1,3 @@
-import CalendlyEmbed from '@/components/CalendlyEmbed';
 import Carousel from '@/components/Carousel';
 import TrackReferrals from '@/components/TrackReferrals';
 import { getJobPostings } from '@/lib/actions/jobPosting';
