@@ -28,7 +28,7 @@ const DashboardClient = ({ user }: { user: any }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-700 text-white">
       <div className="container mx-auto px-4 py-16">
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-green my-10">Welcome, {user.firstName}!</h1>
