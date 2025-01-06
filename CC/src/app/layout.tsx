@@ -1,4 +1,4 @@
-
+// RootLayout.tsx
 import MuiThemeProvider from '@/components/providers/MuiThemeProvider';
 import QueryProvider from '@/components/providers/QueryProvider';
 import { Toaster } from '@/components/ui/toaster';
@@ -56,24 +56,22 @@ export default function RootLayout({
       <MuiThemeProvider>
         <QueryProvider>
           <DashboardProvider>
-            <html lang='en'>
-              <GoogleTagManager gtmId='GTM-KJMFWKDP' />
-              <body>
-                <div
-                  className={`${nunito.className} flex flex-col justify-between min-h-screen bg-slate-100 text-white`}
-                >
+            <html lang="en">
+              <body className={nunito.className}>
+                <GoogleTagManager gtmId="GTM-KJMFWKDP" />
+                <div className="flex flex-col min-h-screen">
                   <NextSSRPlugin
                     routerConfig={extractRouterConfig(ourFileRouter)}
                   />
                   <Header />
-                  <main className='flex-grow w-full'>
+                  <main className="flex-grow w-full">
                     {children}
-                    <SpeedInsights />
-                    <Analytics />
                   </main>
                   <Footer />
                   <Toaster />
                 </div>
+                <SpeedInsights />
+                <Analytics />
               </body>
             </html>
           </DashboardProvider>

@@ -21,7 +21,7 @@ const FilterInput: React.FC<FilterInputProps> = ({ icon, name, placeholder, onCh
         name={name}
         placeholder={placeholder}
         onChange={onChange}
-        className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green focus:border-green transition duration-200 text-gray-800"
+        className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green focus:border-transparent bg-white/80 backdrop-blur-sm transition duration-200 text-gray-800"
       />
     </div>
   </div>
@@ -76,81 +76,89 @@ const JobOpeningsClient: React.FC<JobOpeningsClientProps> = ({ user, openings })
   }, [filters]);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gray-100">
-      <motion.h1 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-4xl font-bold text-center mb-12 text-gray-800"
-      >
-        Current Openings
-      </motion.h1>
+    <div className="w-full bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+        {/* Filters Section */}
+        <div className="bg-gray-50 rounded-xl p-6 mb-12 shadow-sm">
+          <div className="flex flex-col md:flex-row gap-4">
+            <FilterInput
+              icon={<MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+              name="location"
+              placeholder="Filter by location (city or state)"
+              onChange={handleFilterChange}
+            />
+            <FilterInput
+              icon={<Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+              name="title"
+              placeholder="Filter by job title"
+              onChange={handleFilterChange}
+            />
+            <FilterInput
+              icon={<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+              name="industry"
+              placeholder="Filter by industry"
+              onChange={handleFilterChange}
+            />
+          </div>
+        </div>
 
-      <div className="flex flex-wrap gap-4 mb-8">
-  <FilterInput
-    icon={<MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-    name="location"
-    placeholder="Filter by location (city or state)"
-    onChange={handleFilterChange}
-  />
-  <FilterInput
-    icon={<Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-    name="title"
-    placeholder="Filter by job title"
-    onChange={handleFilterChange}
-  />
-  <FilterInput
-    icon={<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-    name="industry"
-    placeholder="Filter by industry"
-    onChange={handleFilterChange}
-  />
-</div>
+        {/* Results Count */}
+        <div className="mb-8">
+          <p className="text-gray-600">
+            Showing {Math.min(visibleCount, filteredJobs.length)} of {filteredJobs.length} opportunities
+          </p>
+        </div>
 
-      <AnimatePresence>
-        {filteredJobs.length > 0 ? (
+        {/* Results Section */}
+        <AnimatePresence mode="wait">
+          {filteredJobs.length > 0 ? (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {filteredJobs.slice(0, visibleCount).map((job) => (
+                <motion.div
+                  key={job._id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <JobCard jobData={job} userData={user} addHoverEffects />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-16"
+            >
+              <p className="text-xl text-gray-500">
+                No job postings match your criteria. Try adjusting your filters.
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Load More Button */}
+        {filteredJobs.length > visibleCount && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="text-center mt-16"
           >
-            {filteredJobs.slice(0, visibleCount).map((job) => (
-              <motion.div
-                key={job._id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <JobCard jobData={job} userData={user} addHoverEffects />
-              </motion.div>
-            ))}
+            <button
+              onClick={handleLoadMore}
+              className="px-8 py-4 bg-green text-white rounded-lg hover:bg-white border-2 border-green hover:text-green transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Load More Opportunities
+            </button>
           </motion.div>
-        ) : (
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center text-gray-500 mt-8"
-          >
-            No job postings match your criteria. Try adjusting your filters.
-          </motion.p>
         )}
-      </AnimatePresence>
-
-      {filteredJobs.length > visibleCount && (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center mt-8"
-        >
-          <button
-            onClick={handleLoadMore}
-            className="px-6 py-3 bg-green text-white rounded-lg hover:bg-white border-2 border-green hover:text-green transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            Load More Opportunities
-          </button>
-        </motion.div>
-      )}
+      </div>
     </div>
   );
 };

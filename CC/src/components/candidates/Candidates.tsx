@@ -1,5 +1,5 @@
+// Candidates.tsx
 'use client';
-// Candidates.js
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -17,7 +17,7 @@ const Candidates = () => {
 
   useEffect(() => {
     const options = {
-      root: null, 
+      root: null,
       rootMargin: '0px',
       threshold: 0.4,
     };
@@ -41,48 +41,41 @@ const Candidates = () => {
     };
   }, [visibleItems]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -50 }, // More pronounced slide-in from the left
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
-
   return (
-    <div className="max-w-7xl mx-auto p-6"> {/* Narrower padding */}
-      <motion.h2
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="text-xl md:text-3xl font-bold text-green mb-8 text-left" // Smaller heading
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl mx-auto text-center mb-16"
       >
-        Why you should trust us with your career
-      </motion.h2>
-      <motion.p
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="text-base md:text-xl text-gray-700 mb-8 text-left" // Smaller body text
-      >
-        As a candidate in high demand, you deserve a trusted partner who can connect you with exceptional opportunities and provide expert guidance for your career.
-      </motion.p>
-      <div className="space-y-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-green mb-6">
+          Why you should trust us with your career
+        </h2>
+        <p className="text-lg text-gray-700">
+          As a candidate in high demand, you deserve a trusted partner who can connect you with exceptional opportunities and provide expert guidance for your career.
+        </p>
+      </motion.div>
+
+      <div className="space-y-12">
         {items.map((item, index) => (
           <motion.div
             key={index}
-            initial="hidden"
-            animate={visibleItems.includes(index) ? "visible" : "hidden"}
-            variants={itemVariants}
-            className={`flex items-start border-b border-gray-200 pb-6 item`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={visibleItems.includes(index) ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="flex items-start gap-6 item"
             data-index={index}
           >
-            <span className="font-bold text-green text-3xl md:text-4xl mr-6">{`0${index + 1}`}</span> {/* Smaller numbers */}
-            <p className={`text-gray-${index % 2 === 0 ? '800' : '600'} text-base md:text-xl`}>
-              {item}
-            </p>
+            <span className="flex-shrink-0 font-bold text-green text-4xl">
+              {`0${index + 1}`}
+            </span>
+            <div className="flex-grow">
+              <p className="text-lg text-gray-800 leading-relaxed">
+                {item}
+              </p>
+              <div className="mt-4 h-px bg-gray-200 w-full" />
+            </div>
           </motion.div>
         ))}
       </div>

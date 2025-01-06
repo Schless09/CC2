@@ -3,13 +3,23 @@ import CalendlyEmbed from '@/components/CalendlyEmbed';
 
 const Page = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center p-6 md:p-12 bg-slate-100">
-      <div className="w-full max-w-lg sm:max-w-full bg-white rounded-lg shadow-lg p-6">
-        {/* Optional heading */}
-        <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">
-          Please schedule time to speak with our founder.
-        </h1>
-        <CalendlyEmbed url='https://calendly.com/andrew-schuessler-2/candidate-call' />
+    <div className="w-full">
+      {/* Hero Section */}
+      <div className="w-full bg-gradient-to-br from-gray-900 via-green to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white">
+            Schedule Time With Our Founder
+          </h1>
+        </div>
+      </div>
+
+      {/* Calendar Section */}
+      <div className="w-full bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+          <div className="bg-white rounded-xl shadow-sm">
+            <CalendlyEmbed url='https://calendly.com/andrew-schuessler-2/candidate-call' />
+          </div>
+        </div>
       </div>
     </div>
   );

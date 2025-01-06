@@ -1,11 +1,10 @@
-
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import Tolstoy from './Tolstoy';
+import Tolstoy from '../Tolstoy';
 import { useInView } from 'react-intersection-observer';
 
-const HiringManager = () => {
+const CrowdsourcedSection = () => {
   const { ref, inView } = useInView({ threshold: 0.3 });
 
   // Animation variants
@@ -19,16 +18,15 @@ const HiringManager = () => {
     "Gain access to hidden talent networks",
     "Candidates endorsed and referred by industry peers",
     "An efficient and streamlined hiring process",
-    "Competitive 20% success fee",
+    "Competitive 22% success fee",
   ];
-  
 
   return (
     <section ref={ref} className="text-gray-800 body-font py-8">
       <div className="container px-5 mx-auto flex flex-col lg:flex-row items-center">
-
+        
         {/* Text Content */}
-        <motion.div 
+        <motion.div
           className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12"
           initial="hidden"
           animate={inView ? "enter" : "exit"}
@@ -42,7 +40,7 @@ const HiringManager = () => {
           </p>
           <ul className="space-y-4">
             {features.map((feature, index) => (
-              <motion.li 
+              <motion.li
                 key={index}
                 className="flex items-center"
                 initial="hidden"
@@ -64,36 +62,33 @@ const HiringManager = () => {
             <span className="text-green font-semibold"> thousands of SWE professionals.</span>
           </p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row justify-left items-center gap-4 mb-6"
             initial="hidden"
             animate={inView ? "enter" : "exit"}
             variants={variants}
             transition={{ delay: 0.4 }}
           >
-            <Link href="/hiring-manager/ScheduleTimeToChat">
-              <span className="inline-flex items-center bg-transparent border-2 border-green text-green py-3 px-6 focus:outline-none hover:bg-green hover:text-white rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                Schedule a Chat
-              </span>
-            </Link>
+          
           </motion.div>
         </motion.div>
 
         {/* Video Section */}
-        <motion.div 
+        <motion.div
           className="lg:w-1/2 lg:pl-12 flex justify-center items-center"
           initial="hidden"
           animate={inView ? "enter" : "exit"}
           variants={variants}
         >
           <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <Tolstoy src='https://player.gotolstoy.com/b8s3otpec8tqr' />
+            <Tolstoy src="https://player.gotolstoy.com/b8s3otpec8tqr" />
           </div>
         </motion.div>
+
       </div>
     </section>
   );
 };
 
-export default HiringManager;
+export default CrowdsourcedSection;
 

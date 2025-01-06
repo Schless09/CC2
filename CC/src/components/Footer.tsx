@@ -40,7 +40,6 @@ const Footer = () => {
                 <li><Link href='/candidates'><span className='hover:text-green transition-colors'>Candidates</span></Link></li>
                 <li><Link href='/openings'><span className='hover:text-green transition-colors'>Openings</span></Link></li>
                 <li><Link href='/hiring-manager'><span className='hover:text-green transition-colors'>Hiring Managers</span></Link></li>
-                <li><Link href='/blog'><span className='hover:text-green transition-colors'>Blog</span></Link></li>
               </ul>
             </div>
             <div>
