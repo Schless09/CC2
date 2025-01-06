@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
-  const fullText = "Your network is someone's ticket in.";
+  const fullText = "Your network is the ticket in.";
 
   useEffect(() => {
     let index = 0;
@@ -41,7 +41,7 @@ export default function Hero() {
         </h1>
         <Link href="/businessModel">
           <button className="px-6 py-3 bg-white hover:bg-gray-300 text-green font-semibold text-lg rounded-lg shadow-md transition">
-            Get Started
+            Start earning money today
           </button>
         </Link>
       </div>
