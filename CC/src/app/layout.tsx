@@ -59,7 +59,7 @@ export default function RootLayout({
             <html lang="en">
               <body className={nunito.className}>
                 <GoogleTagManager gtmId="GTM-KJMFWKDP" />
-                <div className="flex flex-col min-h-screen">
+                <div className="flex flex-col min-h-screen bg-gray-200">
                   <NextSSRPlugin
                     routerConfig={extractRouterConfig(ourFileRouter)}
                   />

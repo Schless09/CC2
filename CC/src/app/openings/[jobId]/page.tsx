@@ -1,4 +1,3 @@
-import CalendlyEmbed from '@/components/CalendlyEmbed';
 import JobDetailCard from '@/components/cards/JobDetailCard';
 import { getJobPosting } from '@/lib/actions/jobPosting';
 import { getUser } from '@/lib/actions/user';
@@ -19,7 +18,7 @@ const JobOpeningPage = async ({ params }: { params: IParams }) => {
   const job = await getJobPosting(params);
 
   return (
-    <div className='container mx-auto px-4 sm:px-6 lg:px-8 pb-2'>
+    <div className='container mx-auto px-4 sm:px-6 lg:px-8 pb-2 mt-20'>
       <JobDetailCard user={user ?? null} jobOpening={job} />
       <div className='flex justify-end mt-8'>
         <Link

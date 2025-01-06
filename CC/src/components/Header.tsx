@@ -33,7 +33,7 @@ const Header = () => {
     >
       <nav className="w-full px-8 flex justify-between items-center max-w-7xl mx-auto">
         <Link href="/">
-          <span className="text-2xl text-white font-bold hover:text-green transition-colors flex items-center">
+          <span className="text-2xl text-green font-bold hover:text-white transition-colors flex items-center">
             Coder Collective
           </span>
         </Link>
@@ -46,23 +46,23 @@ const Header = () => {
             </span>
           </Link> */}
           <Link href="/businessModel">
-            <span className="text-sm text-white/80 hover:text-green transition-colors">
+            <span className="text-sm text-black/80 hover:text-white transition-colors">
               $6K Referrals
             </span>
           </Link>
           <Link href="/candidates">
-            <span className="text-sm text-white/80 hover:text-green transition-colors">
+            <span className="text-sm text-black/80 hover:text-white transition-colors">
               Candidates
             </span>
           </Link>
           <Link href="/hiring-manager">
-            <span className="text-sm text-white/80 hover:text-green transition-colors">
+            <span className="text-sm text-black/80 hover:text-white transition-colors">
               Hiring Managers
             </span>
           </Link>
           {isSignedIn && (
             <Link href="/dashboard">
-              <span className="text-sm text-white/80 hover:text-green transition-colors">
+              <span className="text-sm text-black/80 hover:text-white transition-colors">
                 Dashboard
               </span>
             </Link>
@@ -70,12 +70,12 @@ const Header = () => {
           {!isSignedIn ? (
             <div className="space-x-3">
               <SignInButton mode="modal">
-                <button className="bg-transparent text-sm text-white/80 hover:text-green transition-colors">
+                <button className="bg-transparent text-sm text-black/80 hover:text-white transition-colors">
                   Sign In
                 </button>
               </SignInButton>
               <SignUpButton mode="modal">
-                <button className="bg-green/90 hover:bg-green text-white text-sm px-4 py-2 rounded-full transition-colors">
+                <button className="bg-green/90 hover:bg-white text-black text-sm px-4 py-2 rounded-full transition-colors">
                   Sign Up
                 </button>
               </SignUpButton>

@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Candidates = () => {
-  const items = [
-    "We take the time to really understand you, your career and aspirations",
-    "We offer consultative advice on the market, your resume and how to position yourself for the best opportunities",
-    "We provide you with market leading interview preparation and support you every step of the way to secure your new job",
-    "We work with the market's leading companies, make you aware of top opportunities and confidentially network with SWE & Product leaders on your behalf",
-    "We support you in negotiating the best salary/hourly rate whilst remaining competitive",
-    "We build long term partnerships to support you every step of your career",
+    const items = [
+    "We conduct in-depth career mapping sessions to align opportunities with your skills, values and long-term goals",
+    "We provide data-driven market insights and personalized resume optimization to position you as a top candidate",
+    "We deliver structured interview coaching with real scenario practice and detailed feedback to maximize your success rate",
+    "We maintain relationships with VC-backed startups, giving you access to roles not advertised on LinkedIn or job boards",
+    "We leverage market data and industry benchmarks to help you secure the best compensation package",
+    "We remain your dedicated career partner post-placement, offering ongoing mentorship and growth opportunities",
   ];
 
   const [visibleItems, setVisibleItems] = useState([0]);
