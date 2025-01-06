@@ -6,6 +6,8 @@ import HiringManagerHero from '@/components/hiring-manager/HiringManagerHero';
 import CrowdsourcedSection from '@/components/hiring-manager/CrowdsourcedSection';
 import ScheduleTimeComponent from '@/components/hiring-manager/ScheduleTimeComponent';
 import TechnicalRecruitingComponent from '@/components/hiring-manager/TechnicalRecruitingComponent';
+import StretchedImage from '@/components/hiring-manager/StretchedImage';
+import WhyChooseUs from '@/components/hiring-manager/WhyChooseUs';
 
 
 const HiringManagerPage = () => {
@@ -21,6 +23,9 @@ const HiringManagerPage = () => {
 
         {/* Crowdsourced Recruiting Section */}
         <CrowdsourcedSection />
+
+        <StretchedImage />
+        <WhyChooseUs />
         
         {/* Calendar Section */}
         <ScheduleTimeComponent />
