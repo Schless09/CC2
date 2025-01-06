@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 
 const FAQs = () => {
     return (
-        <div className="max-w-4xl mx-auto bg-white text-gray-800 shadow-md rounded-lg p-6 my-8">
+        <div className="max-w-4xl mx-auto text-gray-800 shadow-md rounded-lg p-6 my-20">
             <h1 className="text-3xl font-semibold text-center text-gray-700 mb-8">
                 Frequently Asked Questions (FAQ) - Referral and Reward Program
             </h1>

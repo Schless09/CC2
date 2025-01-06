@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[calc(100vh-4rem)]">
+    <section className="relative min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-green to-gray-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(22,163,74,0.15),rgba(0,0,0,0))]" />
       </div>

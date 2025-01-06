@@ -28,16 +28,16 @@ const DashboardClient = ({ user }: { user: any }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-white">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-16">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-green mb-4">Welcome, {user.firstName}!</h1>
+          <h1 className="text-4xl font-bold text-green my-10">Welcome, {user.firstName}!</h1>
           <div className="flex space-x-4">
             <button onClick={handleGenerate} className="flex items-center text-green px-4 py-2 bg-transparent rounded-full hover:text-green hover:border-2 hover:border-green">
               <ContentCopy className="mr-2" />
               Copy Referral Link
             </button>
-            <button onClick={handleShareToLinkedIn} className="flex items-center px-4 py-2 bg-green rounded-full hover:bg-white hover:border-2 hover:border-green hover:text-green">
+            <button onClick={handleShareToLinkedIn} className="flex items-center px-4 py-2 bg-green rounded-full hover:bg-white hover:border-green hover:text-green">
               <LinkedIn className="mr-2" />
               Share Referral Code on LinkedIn
             </button>

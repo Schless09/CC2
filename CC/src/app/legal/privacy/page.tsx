@@ -3,7 +3,7 @@ import React from 'react';
 
 const Page = () => {
   return (
-    <div className="max-w-4xl mx-auto bg-white text-black shadow-lg rounded-lg p-4 mt-10">
+    <div className="max-w-4xl mx-auto bg-white text-black shadow-lg rounded-lg p-4 my-16">
       <h1 className="text-3xl font-semibold text-center text-gray-500 mb-4">Privacy Policy for Coder Collective</h1>
       
       <p className="text-sm text-right text-gray-500 mb-6">Last Updated: October 4th, 2024</p>
