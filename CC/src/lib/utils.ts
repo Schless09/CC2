@@ -60,42 +60,66 @@ export const clientReferralEmailMessage = ({
   userLastName,
   emailCompany,
 }: ClientReferralEmailMessageProps) => {
-  const msg = `<div>
-      <p>
-        Hi ${emailFirstName} - this message is being sent to you on behalf of
-        ${userFirstName} ${userLastName} (CC'd). We noticed ${
-    emailCompany ?? 'your team'
-  } is hiring software enginnering talent and asked ${userFirstName} to make the introduction.
-      </p>
-      <p>
-      At our core, Coder Collective is a recruitment firm. What makes us unique is our ability to harness the potential of 
-      expansive networks. Our approach empowers the everyday Accountant to utilize their personal and professional networks, 
-      aiding us in forging meaningful relationships.
-      </p>
-      <p>
-      Specializing in the direct hire placement of top-tier SWE professionals, we'd welcome the opportunity to not only meet, but exceed your hiring requirements.
-      </p>
-      <p>
-        Full disclosure, ${userFirstName} receives a referral bonus if you end up
-        hiring someone through our services.
-      </p>
+  const msg =
+  // `<div>
+  //     <p>
+  //       Hi ${emailFirstName} - ${userFirstName} ${userLastName} (CC'd) provided your contact info and suggested we connect. 
+  //     </p>
+  //     <p>
+  //     At our core, Coder Collective is a recruitment firm. What makes us unique is our ability to harness the potential of 
+  //     expansive networks. Thanks to the efforts of indivdisual like ${userFirstName}, to utilize their personal and professional networks, 
+  //     aiding us in forging meaningful relationships.
+  //     </p>
+  //     <p>
+  //     Specializing in the direct hire placement of top-tier SWE professionals, we'd welcome the opportunity to not only meet, but exceed your hiring requirements.
+  //     </p>
+  //     <p>
+  //       Full disclosure, ${userFirstName} receives a referral bonus if you end up
+  //       hiring someone through our services.
+  //     </p>
     
-      <p>
-        We exclusively conduct contingent searches, ensuring our services are tailored to meet your specific needs. To get started, please feel free to reach out directly or 
-        <a href='https://thecodercollective.com/hiring-manager' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>visit our website</a> 
-        and schedule time to discuss your hiring objectives.
-      </p>
-      <p>Best regards,</p>
+  //     <p>
+  //       We exclusively conduct contingent searches, ensuring our services are tailored to meet your specific needs. To get started, please feel free to reach out directly or 
+  //       <a href='https://thecodercollective.com/hiring-manager' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>visit our website</a> 
+  //       and schedule time to discuss your hiring objectives.
+  //     </p>
+  //     <p>Best regards,</p>
       
-      <span style="display: block;">Andrew Schuessler</span>
-      <span style="display: block;">Coder Collective</span>
-      <span style="display: block;">
-      847-609-4515 | Connect w/ me on  
-      <a href='https://www.linkedin.com/in/andrew-schuessler-18965559/' 
-      target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>LinkedIn</a> 
-      </span>
-      <span style="display: block;">andrew@thecodercollective.com</span>
-    </div>`;
+  //     <span style="display: block;">Andrew Schuessler</span>
+  //     <span style="display: block;">Coder Collective</span>
+  //     <span style="display: block;">
+  //     847-609-4515 | Connect w/ me on  
+  //     <a href='https://www.linkedin.com/in/andrew-schuessler-18965559/' 
+  //     target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>LinkedIn</a> 
+  //     </span>
+  //     <span style="display: block;">andrew@thecodercollective.com</span>
+  //   </div>`;
+  `<div>
+  <p>
+    Hi ${emailFirstName},  
+    ${userFirstName} ${userLastName} (CC'd) recently shared your contact information and suggested we connect.
+  </p>
+  <p>
+    Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. Through connections with individuals like ${userFirstName}, we foster relationships that lead to successful hiring outcomes.
+  </p>
+    <p>
+   We work exclusively on a contingent basis and tailor our efforts to meet your needs. Feel free to reach out directly or  
+    <a href="https://thecodercollective.com/hiring-manager" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">visit our website</a> 
+    to schedule a time to discuss your hiring goals.
+  </p>
+  <p>
+    Full disclosure: ${userFirstName} receives a referral bonus if ${emailCompany} hires through our services.
+  </p>
+  <p>Best regards,</p>
+  <p style="margin: 0; font-weight: bold;">Andrew Schuessler</p>
+  <p style="margin: 0;">Coder Collective</p>
+  <p style="margin: 0;">
+    847-609-4515 | Connect with me on  
+    <a href="https://www.linkedin.com/in/andrew-schuessler-18965559/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">LinkedIn</a>
+  </p>
+  <p style="margin: 0;">andrew@thecodercollective.com</p>
+</div>
+`
   return msg;
 };
 
@@ -152,19 +176,16 @@ export const referralEmailMessage = ({
       your contact information and suggested you might be a fit for one of the roles we're 
       currently looking to fill.
     </p>
-    <p>
-        At our core, Coder Collective is a recruitment firm. What makes us unique is our ability to harness the potential of 
-        expansive networks. Our approach empowers the everyday Accountant to utilize their personal and professional networks, 
-        aiding us in forging meaningful relationships.
-    </p>
+     <p>
+    At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we leverage the power of our expansive networks to connect with outstanding talent. Thanks to contributions from engineers like ${userFirstName}, we continue to foster meaningful relationships within the tech community, creating opportunities that benefit everyone involved.
+  </p>
     <p>
       I’d love to learn more about your professional background and career goals. Please 
-      <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" className="text-blue-700 underline">schedule a time to chat</a> at your earliest convenience.
+      <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" className="text-blue-700 underline">schedule time to chat</a> at your earliest convenience.
     </p>
-    <p>
-      Full disclosure, ${userFirstName} receives a referral bonus if you end up being hired
-      through one of our clients.
-    </p>
+     <p>
+    Just a heads-up: ${userFirstName} will receive a referral bonus if you're hired through one of our clients.
+  </p>
     <p>Best regards,</p>
     <span style="display: block;">Andrew Schuessler</span>
     <span style="display: block;">Coder Collective</span>
@@ -197,7 +218,11 @@ export const referralStatusEmailMessage = ({
     
     <p>You can view the latest updates and track each of your referrals by visiting your <a href='https://theCoder Collective.com/dashboard/' target='_blank' rel="noopener noreferrer" class='text-blue-700 underline'>dashboard</a>.</p>
    
-    <p>Have someone else you'd like to introduce to Coder Collective? Consider submitting additional candidate referrals or client introductions! You can start by visiting the <a href="https://www.theCoderCollective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Candidate Referrals</a> page or the <a href="https://www.theCoderCollective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Client Introduction</a> page. Each link will guide you through the process.</p>
+    <p>
+      Know someone else who could benefit from connecting with Coder Collective? You’re welcome to submit additional candidate referrals or client introductions! Simply visit our 
+      <a href="https://www.theCoderCollective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Candidate Referrals</a> page or 
+      <a href="https://www.theCoderCollective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Client Introduction</a> page to get started. Both links provide an easy step-by-step process.
+    </p>
    
     <p>If you have any questions or need assistance, please don't hesitate to reach out to us.</p>
    

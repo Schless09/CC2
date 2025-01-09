@@ -13,31 +13,15 @@ const EmailMessage = ({
       <CardContent>
         <div>
           <p>
-            Hi {emailFirstName} - this message is being sent to you on behalf of{' '}
-            {userFirstName} {userLastName} (CC&apos;d). We noticed{' '}
-            {emailCompany ?? 'your team'} is hiring software enginnering talent
-            and asked {userFirstName} to make the introduction.
+            Hi {emailFirstName} - {userFirstName} {userLastName} (CC&apos;d) recently shared your contact information and suggested we connect.
           </p>
           <br />
           <p>
-            At our core, Coder Collective is a recruitment firm. 
-            What makes us unique is our ability to harness the potential of expansive networks. 
-            Our approach empowers the everyday Accountant to utilize their personal and professional networks, aiding us in forging meaningful relationships.
+          Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. Through connections with individuals like {userFirstName}, we foster relationships that lead to successful hiring outcomes.
           </p>
           <br />
           <p>
-            Specializing in the direct hire placement of top-tier SWE
-            professionals, we&apos;d welcome the opportunity to not only meet, but exceed
-            your hiring requirements.
-          </p>
-          <br />
-          <p>
-            Full disclosure, {userFirstName} receives a referral bonus if you
-            end up hiring someone through our services.
-          </p>
-          <br />
-          <p>
-           We exclusively conduct contingent searches, ensuring our services are tailored to meet your specific needs. To get started, please feel free to reach out directly or {' '}
+          We work exclusively on a contingent basis and tailor our efforts to meet your needs. Feel free to reach out directly or {' '}
             <Link
               href="https://thecodercollective.com/hiring-manager"
               className="text-green underline"
@@ -48,9 +32,15 @@ const EmailMessage = ({
             and schedule time to discuss your hiring objectives.
           </p>
           <br />
+          <p>
+            Full disclosure, {userFirstName} receives a referral bonus if {emailCompany}{' '}
+            ends up hiring someone through our services.
+          </p>
+          <br />
           <p>Best regards,</p>
           <br />
-          <p>Andrew Schuessler</p> <p>Coder Collective</p>
+          <p>Andrew Schuessler</p>
+          <p>Coder Collective</p>
           <p>
             847-609-4515 | Connect w/ me on{' '}
             <Link
