@@ -61,39 +61,6 @@ export const clientReferralEmailMessage = ({
   emailCompany,
 }: ClientReferralEmailMessageProps) => {
   const msg =
-  // `<div>
-  //     <p>
-  //       Hi ${emailFirstName} - ${userFirstName} ${userLastName} (CC'd) provided your contact info and suggested we connect. 
-  //     </p>
-  //     <p>
-  //     At our core, Coder Collective is a recruitment firm. What makes us unique is our ability to harness the potential of 
-  //     expansive networks. Thanks to the efforts of indivdisual like ${userFirstName}, to utilize their personal and professional networks, 
-  //     aiding us in forging meaningful relationships.
-  //     </p>
-  //     <p>
-  //     Specializing in the direct hire placement of top-tier SWE professionals, we'd welcome the opportunity to not only meet, but exceed your hiring requirements.
-  //     </p>
-  //     <p>
-  //       Full disclosure, ${userFirstName} receives a referral bonus if you end up
-  //       hiring someone through our services.
-  //     </p>
-    
-  //     <p>
-  //       We exclusively conduct contingent searches, ensuring our services are tailored to meet your specific needs. To get started, please feel free to reach out directly or 
-  //       <a href='https://thecodercollective.com/hiring-manager' target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>visit our website</a> 
-  //       and schedule time to discuss your hiring objectives.
-  //     </p>
-  //     <p>Best regards,</p>
-      
-  //     <span style="display: block;">Andrew Schuessler</span>
-  //     <span style="display: block;">Coder Collective</span>
-  //     <span style="display: block;">
-  //     847-609-4515 | Connect w/ me on  
-  //     <a href='https://www.linkedin.com/in/andrew-schuessler-18965559/' 
-  //     target='_blank' rel='noopener noreferrer' class='text-blue-700 underline'>LinkedIn</a> 
-  //     </span>
-  //     <span style="display: block;">andrew@thecodercollective.com</span>
-  //   </div>`;
   `<div>
   <p>
     Hi ${emailFirstName},  

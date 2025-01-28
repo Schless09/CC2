@@ -2,12 +2,11 @@
 import { FileUploadFieldProps } from '@/lib/types';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import CheckIcon from '@mui/icons-material/Check';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { ChangeEvent, useRef, useState } from 'react';
 import { Controller } from 'react-hook-form';
 import { Button } from './ui/button';
 import { toast } from './ui/use-toast';
-
-
 
 const FileUploadField = ({
   control,
@@ -15,7 +14,7 @@ const FileUploadField = ({
   title,
   error,
   name = 'fileUrl',
-  disabled = false, // Add this line
+  disabled = false,
 }: FileUploadFieldProps) => {
   const [selectedFile, setSelectedFile] = useState('');
   const fileInputRef: React.RefObject<HTMLInputElement> = useRef(null);
@@ -51,8 +50,18 @@ const FileUploadField = ({
     }
   };
 
+  const handleDelete = () => {
+    setSelectedFile('');
+    setFiles([]);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''; // Clear the file input
+    }
+    // Reset the form field value
+    control.setValue(name, '');
+  };
+
   return (
-    <>
+    <div className="flex items-center space-x-2">
       <Controller
         name={name}
         control={control}
@@ -62,7 +71,7 @@ const FileUploadField = ({
             variant='ghost'
             onBlur={onBlur}
             onClick={handleClick}
-            className={`referral-selector-upload-btn ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`referral-selector-upload-btn flex-grow ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={disabled}
           >
             {selectedFile ? <CheckIcon /> : <FileUploadIcon />}
@@ -77,10 +86,21 @@ const FileUploadField = ({
           </Button>
         )}
       />
+      {selectedFile && (
+        <Button
+          type='button'
+          variant='ghost'
+          onClick={handleDelete}
+          className="text-red-500 hover:text-red-700"
+          title="Delete file"
+        >
+          <DeleteIcon />
+        </Button>
+      )}
       {error && (
         <p className='text-[13px] text-[#f44336] !mt-2 !ml-[14px]'>{error}</p>
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,13 +1,29 @@
+// ReferralSelector.tsx
 'use client';
-import { intakeSchema } from '@/lib/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { ReferralSelectorProps } from '@/lib/types';
-import { Box, InputLabel, Stack, TextField } from '@mui/material';
+import { intakeSchema } from '@/lib/schemas';
 import * as z from 'zod';
 import SelectUserField from '../SelectUserField';
 import FileUploadField from '../FileUploadField';
-import ReferralButton from '../ReferralButton';
+
+const ReferralButton = ({ isLoading }: { isLoading: boolean }) => (
+  <button
+    type="submit"
+    disabled={isLoading}
+    className={`
+      w-full py-3 px-4 rounded-lg text-white font-medium
+      ${isLoading 
+        ? 'bg-gray-400 cursor-not-allowed' 
+        : 'bg-green hover:bg-green/90'
+      }
+      transition-colors duration-200
+    `}
+  >
+    {isLoading ? 'Processing...' : 'Submit Referral and/or Resume'}
+  </button>
+);
 
 const ReferralSelector = ({
   onSubmit,
@@ -22,42 +38,27 @@ const ReferralSelector = ({
       fileUrl: '',
     },
   });
-  const {
-    control,
-    handleSubmit,
-    // formState: { errors },
-  } = form;
 
   return (
     <form
-      onSubmit={handleSubmit((values) => onSubmit(values))}
-      className='w-full'
+      onSubmit={form.handleSubmit(onSubmit)}
+      className="space-y-8"
       noValidate
     >
-      <Stack spacing={2}>
-        <SelectUserField control={control} isLoading={isLoading} />
-        <Box>
-          <InputLabel className='mb-2'>LinkedIn URL (optional)</InputLabel>
-          <Controller
-            name='linkedinURL'
-            control={control}
-            render={({ field: { ref, ...field } }) => (
-              <TextField
-                variant='outlined'
-                inputRef={ref}
-                className='w-full'
-                {...field}
-              />
-            )}
+      <div className="bg-white shadow-lg rounded-lg border border-gray-200">
+        <div className="p-8 space-y-8">
+          <FileUploadField
+            setFiles={setFiles}
+            control={form.control}
+            title="Upload Resume"
           />
-        </Box>
-        <FileUploadField
-          setFiles={setFiles}
-          control={control}
-          title='Upload Resume'
-        />
+          <SelectUserField control={form.control} isLoading={isLoading} />
+        </div>
+      </div>
+
+      <div className="px-8">
         <ReferralButton isLoading={isLoading} />
-      </Stack>
+      </div>
     </form>
   );
 };
