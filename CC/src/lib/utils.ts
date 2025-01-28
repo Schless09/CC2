@@ -183,7 +183,7 @@ export const referralStatusEmailMessage = ({
       Hi ${userFirstName} - ${referralFirstName} ${referralLastName}&apos;s status has been changed ${statusMessage}.
     </p>
     
-    <p>You can view the latest updates and track each of your referrals by visiting your <a href='https://theCoder Collective.com/dashboard/' target='_blank' rel="noopener noreferrer" class='text-blue-700 underline'>dashboard</a>.</p>
+    <p>You can view the latest updates and track each of your referrals by visiting your <a href='https://thecodercollective.com/dashboard/' target='_blank' rel="noopener noreferrer" class='text-blue-700 underline'>dashboard</a>.</p>
    
     <p>
       Know someone else who could benefit from connecting with Coder Collective? You’re welcome to submit additional candidate referrals or client introductions! Simply visit our 
