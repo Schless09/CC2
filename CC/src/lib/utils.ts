@@ -138,22 +138,18 @@ export const referralEmailMessage = ({
 }: ReferralEmailMessageProps) => {
   const msg = `
   <div>
-    <p>
-      Hi ${emailFirstName} - ${userFirstName} ${userLastName} (CC'd) provided us 
-      your contact information and suggested you might be a fit for one of the roles we're 
-      currently looking to fill.
-    </p>
-     <p>
-    At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we leverage the power of our expansive networks to connect with outstanding talent. Thanks to contributions from engineers like ${userFirstName}, we continue to foster meaningful relationships within the tech community, creating opportunities that benefit everyone involved.
-  </p>
-    <p>
-      I’d love to learn more about your professional background and career goals. Please 
-      <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" className="text-blue-700 underline">schedule time to chat</a> at your earliest convenience.
-    </p>
-     <p>
-    Just a heads-up: ${userFirstName} will receive a referral bonus if you're hired through one of our clients.
-  </p>
-    <p>Best regards,</p>
+        <p>
+          Hi ${emailFirstName},  
+          ${userFirstName} ${userLastName} (CC’d) shared your contact information and recommended you as a great fit for a role we’re currently hiring for.
+        </p>
+        <p>
+          At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we specialize in connecting top tech talent with exciting opportunities through our expansive network. Thanks to engineers like ${userFirstName}, we continue to build meaningful relationships within the tech community.
+        </p>
+        <p>
+          I’d love to learn more about your background and career goals. Let’s set up a quick chat—please 
+          <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" class="text-blue-700 underline">schedule a time</a> at your convenience.
+        </p>
+        <p>Best regards,</p>
     <span style="display: block;">Andrew Schuessler</span>
     <span style="display: block;">Coder Collective</span>
     <span style="display: block;">
