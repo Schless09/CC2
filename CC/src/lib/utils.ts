@@ -140,7 +140,7 @@ export const referralEmailMessage = ({
   <div>
         <p>
           Hi ${emailFirstName},  
-          ${userFirstName} ${userLastName} (CC’d) shared your contact information and recommended you as a great fit for a role we’re currently hiring for.
+          ${userFirstName} ${userLastName} (CC’d) shared your contact information and suggested that we connect regarding potential opportunities.
         </p>
         <p>
           At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we specialize in connecting top tech talent with exciting opportunities through our expansive network. Thanks to engineers like ${userFirstName}, we continue to build meaningful relationships within the tech community.
