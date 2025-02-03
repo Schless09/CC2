@@ -62,7 +62,7 @@ const TrackReferrals = () => {
           >
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold text-white">
-                Monitor Your Success in Real-Time
+                Monitor Your Referral Success in Real-Time
               </h2>
               <p className="text-xl text-white/90">
                 Effortlessly track your referrals as they happen, watching your rewards grow with each successful connection.
