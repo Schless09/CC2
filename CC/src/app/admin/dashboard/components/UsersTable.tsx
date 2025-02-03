@@ -48,7 +48,7 @@ const UsersTable = () => {
                     <Link href={`/admin/dashboard/${user._id}`}>
                       <Avatar>
                         <AvatarImage src={user.profilePhoto} />
-                        <AvatarFallback>{user.firstName[0]}</AvatarFallback>
+                        <AvatarFallback>{user.firstName}</AvatarFallback>
                       </Avatar>
                     </Link>
                   </TableCell>
