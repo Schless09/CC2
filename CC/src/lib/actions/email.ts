@@ -28,7 +28,7 @@ export const sendReferralStatusEmail = async (
     });
     const emailMessage = {
       to: userEmail,
-      cc: process.env.SENDER_EMAIL,
+      bcc: process.env.SENDER_EMAIL,
       from: process.env.SENDER_EMAIL as string,
       subject,
       html: message,

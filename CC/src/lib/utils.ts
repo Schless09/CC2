@@ -138,17 +138,22 @@ export const referralEmailMessage = ({
 }: ReferralEmailMessageProps) => {
   const msg = `
   <div>
-        <p>
+       <p>  
           Hi ${emailFirstName},  
-          ${userFirstName} ${userLastName} (CC’d) shared your contact information and suggested that we connect regarding potential opportunities.
-        </p>
-        <p>
-          At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we specialize in connecting top tech talent with exciting opportunities through our expansive network. Thanks to engineers like ${userFirstName}, we continue to build meaningful relationships within the tech community.
-        </p>
-        <p>
-          I’d love to learn more about your background and career goals. Let’s set up a quick chat—please 
-          <a href="https://cal.com/andrew-schuessler-xrp0oa/20" target="_blank" class="text-blue-700 underline">schedule a time</a> at your convenience.
-        </p>
+          ${userFirstName} ${userLastName} (CC’d) shared your contact information and suggested that we connect regarding potential opportunities.  
+        </p>  
+
+        <p>  
+          At <a href="https://thecodercollective.com" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Coder Collective</a>, we specialize in connecting top tech talent with exciting opportunities through our expansive network. Thanks to engineers like ${userFirstName}, we continue to build meaningful relationships within the tech community.  
+        </p>  
+
+        <p>  
+          We’d love to learn more about your experience. Please reply to this email with your most up-to-date resume, and we’ll review your background to see if there’s a strong fit with one of our clients. If there’s a match, we’ll be in touch with next steps.  
+        </p>  
+
+        <p>  
+          Let us know if you have any questions—we look forward to connecting!  
+        </p>  
         <p>Best regards,</p>
     <span style="display: block;">Andrew Schuessler</span>
     <span style="display: block;">Coder Collective</span>
@@ -179,18 +184,32 @@ export const referralStatusEmailMessage = ({
       Hi ${userFirstName} - ${referralFirstName} ${referralLastName}&apos;s status has been changed ${statusMessage}.
     </p>
     
-    <p>You can view the latest updates and track each of your referrals by visiting your <a href='https://thecodercollective.com/dashboard/' target='_blank' rel="noopener noreferrer" class='text-blue-700 underline'>dashboard</a>.</p>
-   
-    <p>
-      Know someone else who could benefit from connecting with Coder Collective? You’re welcome to submit additional candidate referrals or client introductions! Simply visit our 
-      <a href="https://www.theCoderCollective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Candidate Referrals</a> page or 
-      <a href="https://www.theCoderCollective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">Client Introduction</a> page to get started. Both links provide an easy step-by-step process.
-    </p>
-   
-    <p>If you have any questions or need assistance, please don't hesitate to reach out to us.</p>
-   
-    <p>Thanks,</p>
-    <p>The Coder Collective team</p>
+     <p>
+    You can check the latest updates and track all your referrals by visiting your 
+    <a href="https://thecodercollective.com/dashboard/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">dashboard</a>.
+  </p>
+
+  <p>Do you know someone else who would benefit from connecting with Coder Collective? We’d love your referrals! Submit:</p>
+
+  <ul>
+    <li>
+      <a href="https://www.theCoderCollective.com/referrals" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">
+        Candidate Referrals
+      </a>
+    </li>
+    <li>
+      <a href="https://www.theCoderCollective.com/introClient" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">
+        Client Introductions
+      </a>
+    </li>
+  </ul>
+
+  <p>Both links provide a simple step-by-step process.</p>
+
+  <p>If you have any questions or need assistance, feel free to reach out.</p>
+
+  <p><strong>Thanks,</strong></p>
+  <p>The Coder Collective Team</p>
   </div>
 `;
   return msg;
