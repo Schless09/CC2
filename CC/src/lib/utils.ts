@@ -62,24 +62,29 @@ export const clientReferralEmailMessage = ({
 }: ClientReferralEmailMessageProps) => {
   const msg =
   `<div>
-  <p>
+  <p>  
     Hi ${emailFirstName},  
-    ${userFirstName} ${userLastName} (CC'd) recently shared your contact information and suggested we connect.
-  </p>
+  </p>  
+
+  <p>  
+    ${userFirstName} ${userLastName} (CC'd) recently shared your contact information and suggested we connect regarding potential hiring needs.  
+  </p>  
+
   <p>
-    Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. Through connections with individuals like ${userFirstName}, we foster relationships that lead to successful hiring outcomes.
+    Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. 
   </p>
-    <p>
-   We work exclusively on a contingent basis and tailor our efforts to meet your needs. Feel free to reach out directly or  
-    <a href="https://thecodercollective.com/hiring-manager" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">visit our website</a> 
-    to schedule a time to discuss your hiring goals.
-  </p>
+  
+  <p>  
+      We operate exclusively on a contingent basis, ensuring a tailored approach to meet your hiring goals. If you're interested in learning more, feel free to reach out directly or  
+      <a href="https://thecodercollective.com/hiring-manager" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">visit our website</a>  
+      to schedule a time to discuss your hiring needs.  
+    </p>  
   <p>
-    Full disclosure: ${userFirstName} receives a referral bonus if ${emailCompany} hires through our services.
+    Full disclosure: ${userFirstName} receives a small referral bonus if ${emailCompany} hires through our services.
   </p>
   <p>Best regards,</p>
   <p style="margin: 0; font-weight: bold;">Andrew Schuessler</p>
-  <p style="margin: 0;">Coder Collective</p>
+  <p style="margin: 0;">Managing Partner, Coder Collective</p>
   <p style="margin: 0;">
     847-609-4515 | Connect with me on  
     <a href="https://www.linkedin.com/in/andrew-schuessler-18965559/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">LinkedIn</a>

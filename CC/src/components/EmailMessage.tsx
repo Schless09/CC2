@@ -12,35 +12,39 @@ const EmailMessage = ({
     <Card className="w-full  bg-gray-400 mt-5 pt-2">
       <CardContent>
         <div>
+        <p>  
+          Hi {emailFirstName},  
+        </p>  
+        <br />
+        <p>  
+          {userFirstName} {userLastName} (CC&apos;d) recently shared your contact information and suggested we connect regarding potential hiring needs.  
+        </p>  
+          <br />
           <p>
-            Hi {emailFirstName} - {userFirstName} {userLastName} (CC&apos;d) recently shared your contact information and suggested we connect.
+          Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. 
           </p>
           <br />
           <p>
-          Coder Collective is a San Francisco-based recruitment firm specializing in direct hire placements for top-tier software engineers. Through connections with individuals like {userFirstName}, we foster relationships that lead to successful hiring outcomes.
-          </p>
-          <br />
-          <p>
-          We work exclusively on a contingent basis and tailor our efforts to meet your needs. Feel free to reach out directly or {' '}
-            <Link
+          We operate exclusively on a contingent basis, ensuring a tailored approach to meet your hiring goals. If you&apos;re interested in learning more, feel free to reach out directly or {''} 
+          <Link
               href="https://thecodercollective.com/hiring-manager"
               className="text-green underline"
               target="_blank"
             >
               visit our website
             </Link>{' '}
-            and schedule time to discuss your hiring objectives.
+            to schedule a time to discuss your hiring needs.  
           </p>
           <br />
           <p>
-            Full disclosure, {userFirstName} receives a referral bonus if {emailCompany}{' '}
+            Full disclosure, {userFirstName} receives a small referral bonus if {emailCompany}{' '}
             ends up hiring someone through our services.
           </p>
           <br />
           <p>Best regards,</p>
           <br />
           <p>Andrew Schuessler</p>
-          <p>Coder Collective</p>
+          <p>Managing Partner, Coder Collective</p>
           <p>
             847-609-4515 | Connect w/ me on{' '}
             <Link
