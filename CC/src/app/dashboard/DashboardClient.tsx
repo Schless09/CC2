@@ -32,15 +32,35 @@ const DashboardClient = ({ user }: { user: any }) => {
       <div className="container mx-auto px-4 py-16">
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-green my-10">Welcome, {user.firstName}!</h1>
-          <div className="flex space-x-4">
-            <button onClick={handleGenerate} className="flex items-center text-green px-4 py-2 bg-transparent rounded-full hover:text-green hover:border-2 hover:border-green">
+          <div className="flex flex-wrap gap-4">
+            <button 
+              onClick={handleGenerate} 
+              className="flex items-center px-4 py-2 bg-green border-2 border-green rounded-full text-black hover:bg-gray-800 hover:text-white transition-all duration-200"
+            >
               <ContentCopy className="mr-2" />
               Copy Referral Link
             </button>
-            <button onClick={handleShareToLinkedIn} className="flex items-center px-4 py-2 bg-green rounded-full hover:bg-white hover:border-green hover:text-green">
+            <button 
+              onClick={handleShareToLinkedIn} 
+              className="flex items-center px-4 py-2 bg-green border-2 border-green rounded-full text-black hover:bg-gray-800 hover:text-white transition-all duration-200"
+            >
               <LinkedIn className="mr-2" />
-              Share Referral Code on LinkedIn
+              Post Referral Code on LinkedIn
             </button>
+            <Link 
+              href="/referrals" 
+              className="flex items-center px-4 py-2 bg-green border-2 border-green rounded-full text-black hover:bg-gray-800 hover:text-white transition-all duration-200"
+            >
+              <People className="mr-2" />
+              Submit Candidate Referral
+            </Link>
+            <Link 
+              href="/introClient" 
+              className="flex items-center px-4 py-2 bg-green border-2 border-green rounded-full text-black hover:bg-gray-800 hover:text-white transition-all duration-200"
+            >
+              <Business className="mr-2" />
+              Submit Client Introduction
+            </Link>
           </div>
         </header>
 
@@ -71,7 +91,7 @@ const DashboardClient = ({ user }: { user: any }) => {
           {activeTab === 'candidates' && (
             <div className="space-y-4">
               {user.referrals.length === 0 ? (
-                <p className="text-center text-gray-400">No candidate referrals yet. <Link href="/referrals" className="text-green hover:underline">Submit your first referral</Link>.</p>
+                <p className="text-center text-gray-400">No candidate referrals yet.</p>
               ) : (
                 user.referrals.map((referral: any) => (
                   <ReferralCard key={referral._id} referral={referral} />
@@ -83,7 +103,7 @@ const DashboardClient = ({ user }: { user: any }) => {
           {activeTab === 'clients' && (
             <div className="space-y-4">
               {user.clientReferrals.length === 0 ? (
-                <p className="text-center text-gray-400">No client introductions yet. <Link href="/introClient" className="text-green hover:underline">Submit your first introduction</Link>.</p>
+                <p className="text-center text-gray-400">No client introductions yet.</p>
               ) : (
                 user.clientReferrals.map((referral: any) => (
                   <ReferredClientCard key={referral._id} referral={referral} />

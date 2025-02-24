@@ -65,7 +65,7 @@ const PublicReferralForm: React.FC<Props> = ({
           name='userType'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-gray-800'>User Type</FormLabel>
+              <FormLabel className='text-gray-800'>Referral Type</FormLabel>
               <FormControl>
                 <div className='relative'>
                   <Select
@@ -73,7 +73,7 @@ const PublicReferralForm: React.FC<Props> = ({
                     defaultValue={field.value}
                   >
                     <SelectTrigger className='bg-slate-200 border border-slate-300 rounded-md text-gray-800'>
-                      <SelectValue placeholder='Select User Type' />
+                      <SelectValue placeholder='Select Referral Type' />
                     </SelectTrigger>
                     <SelectContent className='bg-slate-100 border border-slate-300 rounded-md mt-1 w-full max-h-40 overflow-auto'>
                       <SelectItem

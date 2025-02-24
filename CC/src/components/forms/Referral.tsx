@@ -137,7 +137,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700" htmlFor="firstName">
-                    First Name <span className="text-red-500">*</span>
+                    Referral's First Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green focus:border-transparent transition-colors"
@@ -147,14 +147,14 @@ const ReferralForm = ({ user }: { user: any | null }) => {
                     value={formData.firstName}
                     onChange={handleChange}
                     onFocus={handleFocus}
-                    placeholder="Enter first name"
+                    placeholder="Enter Referral's first name"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700" htmlFor="lastName">
-                    Last Name <span className="text-red-500">*</span>
+                    Referral's Last Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green focus:border-transparent transition-colors"
@@ -164,7 +164,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
                     value={formData.lastName}
                     onChange={handleChange}
                     onFocus={handleFocus}
-                    placeholder="Enter last name"
+                    placeholder="Enter Referral's last name"
                     required
                   />
                 </div>
@@ -172,7 +172,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700" htmlFor="email">
-                  Email Address <span className="text-red-500">*</span>
+                  Referral's Email Address <span className="text-red-500">*</span>
                 </label>
                 <input
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green focus:border-transparent transition-colors"
@@ -182,14 +182,14 @@ const ReferralForm = ({ user }: { user: any | null }) => {
                   value={formData.email}
                   onChange={handleChange}
                   onFocus={handleFocus}
-                  placeholder="Enter email address"
+                  placeholder="Enter Referral's email address"
                   required
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700" htmlFor="linkedinURL">
-                  LinkedIn URL <span className="text-gray-500">(optional)</span>
+                  Referral's LinkedIn URL <span className="text-gray-500">(optional)</span>
                 </label>
                 <input
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-green focus:border-transparent transition-colors"
@@ -199,7 +199,7 @@ const ReferralForm = ({ user }: { user: any | null }) => {
                   value={formData.linkedinURL}
                   onChange={handleChange}
                   onFocus={handleFocus}
-                  placeholder="Paste LinkedIn profile URL"
+                  placeholder="Paste Referral's LinkedIn profile URL"
                 />
               </div>
 
